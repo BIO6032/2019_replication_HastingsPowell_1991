@@ -1,0 +1,1 @@
+# 2019_replication_HastingsPowell_1991
