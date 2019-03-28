@@ -170,3 +170,5 @@ for j=1:length(bs)
   zmax[j] = maximum(sol[3,:])
 end
 zmax
+
+# teststs 
