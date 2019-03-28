@@ -1,5 +1,7 @@
 #### Differential Equations - Hastings & Powell ####
 
+# Testing merge conflicts
+
 ## Differential Equations
 using DifferentialEquations
 function f1(u)
