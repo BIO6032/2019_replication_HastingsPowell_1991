@@ -6,13 +6,13 @@ include("HPmodel.jl")
 #Packages
 using Plots, DifferentialEquations
 
-u0=[0.7,0.2,8]  #initial conditions for x,y,z
+u0=[1.0,1.0,1.0]  #initial conditions for x,y,z
 tspan=(0.0,10000) #timespan
 p = [5.0,0.1,3.0,2.0,0.4,0.01] # values for a1, a2, b1, b2, d1 and d2
 
 ###Solving the differential equations
 prob = ODEProblem(parameterized_model,u0,tspan,p)
-sol = solve(prob, alg = RK4(), reltol=1e-10) #have to make sure that RK4 and reltol are correct
+sol = solve(prob) #have to make sure which alg (RK4?) and reltol (1e-10?) are correct
 
 ###Figure 2
 plot(sol,vars=(0,1), xlim=(5000,6500), ylim=(0,1)) #2a
