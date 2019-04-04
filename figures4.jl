@@ -16,7 +16,7 @@ tspan = (0.0,10000.0)
 # b1 values interval
 bs = collect(2.0:0.01:5.0)
 # number of values to collect
-N = 100
+N = 1000
 
 ## Loop to select all values of z for all b1 values
 Z = zeros(Float64, (N,length(bs)))
@@ -29,10 +29,10 @@ for j in 1:length(bs)
   sol = solve(prob)
   # Save values
   Z[:,j] = sol[3,end-(N-1):end]
-  Zmax[j] = maximum(sol[3,:])
+  # Zmax[j] = maximum(sol[3,:])
 end
 Z
-Zmax
+# Zmax
 
 ## Select only local maxima
 Zmaxloc = zeros(Float64, size(Z))
