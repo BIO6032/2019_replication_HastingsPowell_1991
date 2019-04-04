@@ -16,12 +16,14 @@ prob = ODEProblem(parameterized_model,u0,tspan,p)
 sol = solve(prob, alg = RK4(), reltol=1e-10) # canonical Runge-Kutta Order 4 method
 
 #Teacup figure 2D
-plot(sol,vars=(1,2,3), color = :red,
-    linewidth=0.01, linestyle = :dot,
-    xlabel = "x", ylabel = "y", zlabel = "z",
-    legend = :none, yflip = true,
-    title = "Fig. 5E - Chatotic dynamic",
-    ygridlinewidth = 2, ygridalpha = 2)
+fig2d = plot(sol,vars=(1,2,3), color = :red,
+            linewidth=0.01, linestyle = :dot,
+            xlabel = "x", ylabel = "y", zlabel = "z",
+            legend = :none, yflip = true,
+            title = "Fig. 5E - Chatotic dynamic",
+            ygridlinewidth = 2, ygridalpha = 2)
+# Export figure
+savefig(fig2d, "figures/fig2d")
 
 # Figures 5 A and B
 

@@ -51,17 +51,22 @@ points_maxloc = unique(hcat(B, vec(Zmaxloc)); dims=1)
 # Remove null values
 pts_maxloc = points_maxloc[points_maxloc[:,2] .> 0.00,:]
 # Fig.4 A)
-scatter(pts_maxloc[:,1], pts_maxloc[:,2],
-        markersize=1,
-        xlim=(2.2,3.2), ylim=(9.5,13))
+fig4a = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
+                markersize=1,
+                xlim=(2.2,3.2), ylim=(9.5,13))
 # Fig.4 B)
-scatter(pts_maxloc[:,1], pts_maxloc[:,2],
-        markersize=1,
-        xlim=(3.0,6.5), ylim=(3.0,10))
+fig4b = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
+                markersize=1,
+                xlim=(3.0,6.5), ylim=(3.0,10))
 # Fig.4 C)
-scatter(pts_maxloc[:,1], pts_maxloc[:,2],
-        markersize=1,
-        xlim=(2.25,2.6), ylim=(11.4,12.8))
+fig4c = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
+                markersize=1,
+                xlim=(2.25,2.6), ylim=(11.4,12.8))
+
+## Export figures
+savefig(fig4a, "figures/fig4a")
+savefig(fig4b, "figures/fig4b")
+savefig(fig4c, "figures/fig4c")
 
 # using parameters from Andrew's bifurcation diagram
 scatter(pts_maxloc[:,1], pts_maxloc[:,2],
