@@ -16,7 +16,7 @@ end
 
 # Parameter values
 u0 = [0.7,0.2,8] # initial values of x, y and z
-tspan = (0.0,6500) # timespan
+tspan = (0.0,10000) # timespan
 p = [5.0,0.1,3.0,2.0,0.4,0.01] # values of a1, a2, b1, b2, d1 and d2
 
 # Solving the system of differential equations
@@ -30,7 +30,7 @@ plot(sol,vars=(1,2,3), color = :red,
     xlabel = "x", ylabel = "y", zlabel = "z",
     legend = :none, yflip = true,
     title = "Fig. 5E - Chatotic dynamic",
-    ygridlinewidth = 2, ygridalpha = 2)
+    gridlinewidth = 2, gridalpha = 2)
 
 
 
@@ -46,17 +46,24 @@ for i in 1:lastindex(sol)
 end
 solution
 
-constant = 9.0 # poincaré section
-epsilon = 0.0001 # margin of error
+constant = 10.0 # poincaré section
+epsilon = 0.05 # margin of error
 
 solution_x = solution[1,:]
 solution_y = solution[2,:]
 solution_z = solution[3,:]
+
+
+
+indices_x = filter(i -> 0.9 <= i <= 1, solution_x)
+
+
+
 indices_x = findall(solution_x -> 0.9 <= solution_x <= 1, solution_x)
 indices_y = findall(solution_y -> 0 <= solution_y <= 0.1, solution_y)
 indices_z = findall(solution_z -> constant - epsilon <= solution_z <= constant + epsilon, solution_z)
 
-indices = zeros(Int64, 10000)
+indices = zeros(Int64, 1000000)
 for i in 1:length(indices_x)
     if any(indices_y -> indices_y == indices_x[i], indices_y)
          if any(indices_z -> indices_z == indices_x[i], indices_z)
