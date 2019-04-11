@@ -37,7 +37,7 @@ end
 solution
 
 constant = 9.0 # poincaré section
-epsilon = 0.0001 # margin of error
+epsilon = 0.05 # margin of error
 
 solution_x = solution[1,:]
 solution_y = solution[2,:]
@@ -69,3 +69,28 @@ plot(solution[1,indices_n], solution[1,indices_nplus1],
     legend = false, xlabel = "x(n)", ylabel = "x(n+1)",
     seriestype=:scatter, mc = :red,
     title = "Figure 5B - Poincaré map")
+
+
+## GIF
+# define the model
+mutable struct Lorenz
+    dt; a1; a2; b1; b2; d1; d2; x; y; z
+end
+
+function step!(l::Lorenz)
+    dx = l.x*(1-l.x) - l.a1*l.x*l.y/(1 + l.b1*l.x)     ; l.x += l.dt * dx
+    dy = l.a1*l.x*l.y/(1 + l.b1*l.x) - l.a2*l.y*l.z/(1 + l.b2*l.y) - l.d1*l.y ; l.y += l.dt * dy
+    dz = l.a2*l.y*l.z/(1 + l.b2*l.y) - l.d2*l.z   ; l.z += l.dt * dz
+end
+
+attractor = Lorenz((dt = 0.05, a1 = 5.0, a2 = 0.1, b1 = 3.0, b2 = 2.0, d1 = 0.4, d2 = 0.01, x = 0.7, y = 0.2, z = 8)...)
+
+using Plots
+# initialize a 3D plot with 1 empty series
+plt = plot3d(1, xlim=(0,1), ylim=(0,0.5), zlim=(7.5, 10.5),
+                title = "Tea cup GIF", marker = 2)
+# build an animated gif by pushing new points to the plot, saving every 10th frame
+@gif for i=1:1500
+    step!(attractor)
+    push!(plt, attractor.x, attractor.y, attractor.z)
+end every 10
