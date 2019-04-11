@@ -64,9 +64,9 @@ fig4c = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 xlim=(2.25,2.6), ylim=(11.4,12.8))
 
 ## Export figures
-savefig(fig4a, "figures/fig4a")
-savefig(fig4b, "figures/fig4b")
-savefig(fig4c, "figures/fig4c")
+savefig(fig4a, "article/figures/fig4a")
+savefig(fig4b, "article/figures/fig4b")
+savefig(fig4c, "article/figures/fig4c")
 
 # using parameters from Andrew's bifurcation diagram
 scatter(pts_maxloc[:,1], pts_maxloc[:,2],

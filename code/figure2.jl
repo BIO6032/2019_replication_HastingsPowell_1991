@@ -20,6 +20,6 @@ fig2b = plot(sol,vars=(0,2), xlim=(5000,6500), ylim=(0,0.5)) #2b
 fig2c = plot(sol,vars=(0,3), xlim=(5000,6500), ylim=(7,11)) #2c
 
 ## Export figures
-savefig(fig2a, "figures/fig2a")
-savefig(fig2b, "figures/fig2b")
-savefig(fig2c, "figures/fig2c")
+savefig(fig2a, "article/figures/fig2a")
+savefig(fig2b, "article/figures/fig2b")
+savefig(fig2c, "article/figures/fig2c")

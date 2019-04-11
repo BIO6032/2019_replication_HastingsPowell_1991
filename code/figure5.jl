@@ -23,7 +23,7 @@ fig2d = plot(sol,vars=(1,2,3), color = :red,
             title = "Fig. 5E - Chatotic dynamic",
             ygridlinewidth = 2, ygridalpha = 2)
 # Export figure
-savefig(fig2d, "figures/fig2d")
+savefig(fig2d, "article/figures/fig2d")
 
 # Figures 5 A and B
 
