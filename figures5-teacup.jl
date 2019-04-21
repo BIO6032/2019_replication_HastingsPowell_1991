@@ -1,9 +1,9 @@
-###Hastings & Powell 1991
-##Reproducing teacup figure (figure 2D) and figure 5
+### Hastings & Powell 1991
+## Reproducing teacup figure (figure 2D) and figure 5
 
 include("HPmodel.jl")
 
-#Packages
+# Packages
 using Plots, DifferentialEquations
 
 
@@ -11,7 +11,6 @@ using Plots, DifferentialEquations
 #### FIGURES 2D (=5E), 5A and 5B ####
 #### b1 = 3.0
 
-#Values
 u0=[0.7,0.2,8]  #initial conditions for x,y,z
 tspan=(0.0,10000) #timespan
 p_b3 = [5.0,0.1,3.0,2.0,0.4,0.01] # parameter values (a1, a2, b1, b2, c1, c2)
@@ -52,6 +51,7 @@ end
 ind_xyz_b3 = ind_xyz_b3[findall(i -> i > 0, ind_xyz_b3)] # remove extra values (0 values)
 
 
+
 # Figure 5A - Poincaré section
 xmin = 0.95 ; xmax = .983 ; ymin = 0.015 ; ymax = .04
 fig5a = plot(sol_x_b3[ind_xyz_b3], sol_y_b3[ind_xyz_b3],
@@ -64,12 +64,12 @@ fig5a = plot(sol_x_b3[ind_xyz_b3], sol_y_b3[ind_xyz_b3],
 savefig(fig5a, "article\\figures\\fig5a") # export figure
 
 
+
 # Figure 5B - Poincaré map
 ind_n_b3 = ind_xyz_b3[1:length(ind_xyz_b3)-1] # indices for x(n)
 ind_nplus1_b3 = ind_xyz_b3[2:length(ind_xyz_b3)] # indices for x(n+1)
 
-xmin = 0.95
-xmax = 0.98
+xmin = 0.95 ; xmax = 0.98
 fig5b = plot(sol_x_b3[ind_n_b3], sol_x_b3[ind_nplus1_b3],
     legend = false,
     seriestype=:scatter,
@@ -86,7 +86,7 @@ savefig(fig5b, "article\\figures\\fig5b") # export figure
 fig2d = plot(sol_b3,vars=(1,2,3),
             linewidth=0.01, linestyle = :dot,
             xaxis=("x"),
-            yaxis=("y",:flip),
+            yaxis=("y", :flip),
             zaxis=("z"),
             grid=:none,
             legend =:none)
@@ -137,6 +137,7 @@ end
 ind_xyz_b6 = ind_xyz_b6[findall(i -> i > 0, ind_xyz_b6)] # remove extra values (0 values)
 
 
+
 # Figure 5C - Poincaré section
 xmin = 0.93 ; xmax = 1.003 ; ymin = -0.003 ; ymax = .09
 fig5c = plot(sol_x_b6[ind_xyz_b6], sol_y_b6[ind_xyz_b6],
@@ -149,24 +150,25 @@ fig5c = plot(sol_x_b6[ind_xyz_b6], sol_y_b6[ind_xyz_b6],
 savefig(fig5c, "article\\figures\\fig5c") # export figure
 
 
+
 # Figure 5D - Poincaré map
 ind_n_b6 = ind_xyz_b6[1:length(ind_xyz_b6)-1] # indices for x(n)
 ind_nplus1_b6 = ind_xyz_b6[2:length(ind_xyz_b6)] # indices for x(n+1)
 
-xmin = 0.93
-xmax = 1.003
+xmin = 0.93 ; xmax = 1.003
 fig5d = plot(sol_x_b6[ind_n_b6], sol_x_b6[ind_nplus1_b6],
     legend = false,
     seriestype=:scatter,
     xaxis=("x(n)", (xmin, xmax), xmin:0.01:xmax),
     yaxis=("x(n+1)", (xmin, xmax), xmin:0.01:xmax),
     xgrid = :none, ygrid = :none)
-plot!(xmin:0.01:xmax, x, color = :black)
+plot!(xmin:0.01:xmax, xmin:0.01:xmax, color = :black)
 
 savefig(fig5d, "article\\figures\\fig5d") # export figure
 
 
-#Teacup Figures 2D and 5E (Three-dimentional phase plot)
+
+#Teacup (Three-dimentional phase plot)
 # b1 = 6.0
 fig2d2 = plot(sol_b6,vars=(1,2,3),
             linewidth=0.01, linestyle = :dot,
@@ -182,29 +184,36 @@ savefig(fig2d2, "article\\figures\\fig2d2") # export figure
 
 
 
-
-
-
-## GIF
+#### Teacup GIF
+## Inspired by an example of Lorez attractor: http://docs.juliaplots.org/latest/
+## FFmpeg has to be installed prior to running the code
 # define the model
-mutable struct Lorenz
+mutable struct TeaCup
     dt; a1; a2; b1; b2; d1; d2; x; y; z
 end
 
-function step!(l::Lorenz)
-    dx = l.x*(1-l.x) - l.a1*l.x*l.y/(1 + l.b1*l.x)     ; l.x += l.dt * dx
-    dy = l.a1*l.x*l.y/(1 + l.b1*l.x) - l.a2*l.y*l.z/(1 + l.b2*l.y) - l.d1*l.y ; l.y += l.dt * dy
-    dz = l.a2*l.y*l.z/(1 + l.b2*l.y) - l.d2*l.z   ; l.z += l.dt * dz
+function step!(t::TeaCup)
+    dx = t.x*(1-t.x) - t.a1*t.x*t.y/(1 + t.b1*t.x)     ; t.x += t.dt * dx
+    dy = t.a1*t.x*t.y/(1 + t.b1*t.x) - t.a2*t.y*t.z/(1 + t.b2*t.y) - t.d1*t.y ; t.y += t.dt * dy
+    dz = t.a2*t.y*t.z/(1 + t.b2*t.y) - t.d2*t.z   ; t.z += t.dt * dz
 end
 
-attractor = Lorenz((dt = 0.05, a1 = 5.0, a2 = 0.1, b1 = 3.0, b2 = 2.0, d1 = 0.4, d2 = 0.01, x = 0.7, y = 0.2, z = 8)...)
+# solution from initial values
+TeaCup_sol = TeaCup((dt = 0.05, a1 = 5.0, a2 = 0.1, b1 = 3.0, b2 = 2.0, d1 = 0.4, d2 = 0.01, x = 0.7, y = 0.2, z = 8)...)
 
 
 # initialize a 3D plot with 1 empty series
-plt = plot3d(1, xlim=(0,1), ylim=(0,0.5), zlim=(7.5, 10.5),
-                title = "Tea cup GIF", marker = 2)
+plt = plot3d(1, xaxis=("x", (0,1)),
+                yaxis=("y",(0,0.5), :flip),
+                zaxis=("z", (7.5, 10.5)),
+                title = "Animated three-dimentional phase plot",
+                marker = :none,
+                legend = :none,
+                grid=:none,
+                linewidth = 3)
+
 # build an animated gif by pushing new points to the plot, saving every 10th frame
-@gif for i=1:1500
-    step!(attractor)
-    push!(plt, attractor.x, attractor.y, attractor.z)
-end every 10
+ @gif for i=1:30000
+    step!(TeaCup_sol)
+    push!(plt, TeaCup_sol.x, TeaCup_sol.y, TeaCup_sol.z)
+end every 20
