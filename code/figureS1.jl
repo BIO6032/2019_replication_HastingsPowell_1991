@@ -84,7 +84,7 @@ function b2_behavior(;b1val::Float64, b2low::Float64=1.5, b2up::Float64=3.2,out:
   scatter(results[:,1], results[:,2],
           markersize=1,
           xlim=(b2low,b2up), # ylim=(9.5,13),
-          xlabel="b2", ylabel="Z_all", legend=false)
+          xlabel="b2", ylabel="Z", legend=false)
 end
 
 # Examine behavior when changing b2 at b1 = 3.0
