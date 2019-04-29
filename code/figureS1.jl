@@ -84,7 +84,8 @@ function b2_behavior(;b1val::Float64, b2low::Float64=1.5, b2up::Float64=3.2,out:
   scatter(results[:,1], results[:,2],
           markersize=1,
           xlim=(b2low,b2up), # ylim=(9.5,13),
-          xlabel="b2", ylabel="Z", legend=false)
+          xlabel="b2", ylabel="Z", legend=false,
+          grid=:none)
 end
 
 # Examine behavior when changing b2 at b1 = 3.0
@@ -93,8 +94,8 @@ figS1_maxloc = b2_behavior(b1val=3.0, b2low=1.5, b2up=3.2,
 figS1_all = b2_behavior(b1val=3.0, out="all")
 
 ## Export figures
-savefig(figS1_all, "article/figures/SI/figS1_all_b1_3")
-savefig(figS1_maxloc, "article/figures/SI/figS1_maxloc_b1_3")
+# savefig(figS1_all, "article/figures/figS1_all_b1_3")
+savefig(figS1_maxloc, "article/figures/figS1")
 
 # Additionnal examinations
 b2_behavior(b1val=2.0)

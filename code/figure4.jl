@@ -69,17 +69,20 @@ pts_maxloc = points_maxloc[points_maxloc[:,2] .> 0.00,:]
 fig4a = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(2.2,3.2), ylim=(9.5,13),
-                xlabel="b1", ylabel="Zmax", legend=false)
+                xlabel="b1", ylabel="Zmax", legend=false,
+                grid=:none)
 # Fig.4 B)
 fig4b = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(3.0,6.5), ylim=(3.0,10),
-                xlabel="b1", ylabel="Zmax", legend=false)
+                xlabel="b1", ylabel="Zmax", legend=false,
+                grid=:none)
 # Fig.4 C)
 fig4c = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(2.25,2.6), ylim=(11.4,12.8),
-                xlabel="b1", ylabel="Zmax", legend=false)
+                xlabel="b1", ylabel="Zmax", legend=false,
+                grid=:none)
 
 ## Export figures
 savefig(fig4a, "article/figures/fig4a")
