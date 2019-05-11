@@ -1,0 +1,535 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{bezanson2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=17e68031e06f57a7e83caeb4e0aed827}{%
+           family={Bezanson},
+           familyi={B\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+        {{hash=01a6ca61fcd12a3a071ec49304df57f8}{%
+           family={Edelman},
+           familyi={E\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bca7c93f55e669f71c4ff95e68ac9538}{%
+           family={Karpinski},
+           familyi={K\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=de802ff42d9c902868c57a332dbac5e0}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Viral\bibnamedelima B.},
+           giveni={V\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{fullhash}{651af5e2dc744eabe31cd448eb05d640}
+      \strng{bibnamehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{authorbibnamehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{authornamehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{authorfullhash}{651af5e2dc744eabe31cd448eb05d640}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0036-1445, 1095-7200}
+      \field{journaltitle}{SIAM Review}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shorttitle}{Julia}
+      \field{title}{Julia: {A} {Fresh} {Approach} to {Numerical} {Computing}}
+      \field{urlday}{29}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{59}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{65\bibrangedash 98}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1137/141000671
+      \endverb
+      \verb{file}
+      \verb Bezanson et al. - 2017 - Julia A Fresh Approach to Numerical Computing.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\HEMXXR59\\Bezanson et al. - 2017 - Julia A Fresh Approach to Numerical Computing.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/10.1137/141000671
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/10.1137/141000671
+      \endverb
+    \endentry
+    \entry{brose2006}{article}{}
+      \name{author}{3}{}{%
+        {{hash=39ca3a19ab48aa9f09001ea80b9fd10c}{%
+           family={Brose},
+           familyi={B\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+        {{hash=8bf10ed4f0afb794613214b847bea1fd}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2ae2470ca065d7ef410b50b1e3575d2a}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Neo\bibnamedelima D.},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{90729bf1e46dd85bad1440c753c2dbed}
+      \strng{fullhash}{90729bf1e46dd85bad1440c753c2dbed}
+      \strng{bibnamehash}{90729bf1e46dd85bad1440c753c2dbed}
+      \strng{authorbibnamehash}{90729bf1e46dd85bad1440c753c2dbed}
+      \strng{authornamehash}{90729bf1e46dd85bad1440c753c2dbed}
+      \strng{authorfullhash}{90729bf1e46dd85bad1440c753c2dbed}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Classic local stability theory predicts that complex ecological networks are unstable and are unlikely to persist despite empiricistsÕ abundant documentation of such complexity in nature. This contradiction has puzzled biologists for decades. While some have explored how stability may be achieved in small modules of a few interacting species, rigorous demonstrations of how large complex and ecologically realistic networks dynamically persist remain scarce and inadequately understood. Here, we help ﬁll this void by combining structural models of complex food webs with nonlinear bioenergetic models of population dynamics parameterized by biological rates that are allometrically scaled to populationsÕ average body masses. Increasing predator–prey body mass ratios increase population persistence up to a saturation level that is reached by invertebrate and ectotherm vertebrate predators when being 10 or 100 times larger than their prey respectively. These values are corroborated by empirical predator–prey body mass ratios from a global data base. Moreover, negative effects of diversity (i.e. species richness) on stability (i.e. population persistence) become neutral or positive relationships at these empirical ratios. These results demonstrate that the predator–prey body mass ratios found in nature may be key to enabling persistence of populations in complex food webs and stabilizing the diversity of natural ecosystems.}
+      \field{issn}{1461-023X, 1461-0248}
+      \field{journaltitle}{Ecology Letters}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Allometric scaling enhances stability in complex food webs}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{9}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{pages}{1228\bibrangedash 1236}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1111/j.1461-0248.2006.00978.x
+      \endverb
+      \verb{file}
+      \verb Brose et al. - 2006 - Allometric scaling enhances stability in complex f.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\E6ERAFLD\\Brose et al. - 2006 - Allometric scaling enhances stability in complex f.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1111/j.1461-0248.2006.00978.x
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1111/j.1461-0248.2006.00978.x
+      \endverb
+    \endentry
+    \entry{canale1970}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b9ce7e87a62b0781a9ca8b3cad8031c9}{%
+           family={Canale},
+           familyi={C\bibinitperiod},
+           given={Raymond\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b9ce7e87a62b0781a9ca8b3cad8031c9}
+      \strng{fullhash}{b9ce7e87a62b0781a9ca8b3cad8031c9}
+      \strng{bibnamehash}{b9ce7e87a62b0781a9ca8b3cad8031c9}
+      \strng{authorbibnamehash}{b9ce7e87a62b0781a9ca8b3cad8031c9}
+      \strng{authornamehash}{b9ce7e87a62b0781a9ca8b3cad8031c9}
+      \strng{authorfullhash}{b9ce7e87a62b0781a9ca8b3cad8031c9}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Mathematical models of the interaction between predator and host populations have been expressed aa systems of nonlinear ordinary differential equations. Solutions of such systems may be periodic or aperiodic. Periodic oscillatory solutions may depend on the initial conditions of the system or may be limit cycles. Aperiodic solutions can, but do not necessarily, exhibit oscillatory behavior. Therefore, it is important to characterize predatory-prey models on the basis of the possible types of solutions they may possess. This characterization can be accomplished using some well-known methods of nonlinear analysis. Examination of the system singular points and inspection of phase plane portraits have proved to be useful techniques for evaluating the effect of various modifications of early predator-prey models. Of particular interest is the existence of limit cycle oscillations in a model in which predator growth rate is a function of the concentration of prey.}
+      \field{issn}{0006-3592, 1097-0290}
+      \field{journaltitle}{Biotechnology and Bioengineering}
+      \field{month}{5}
+      \field{number}{3}
+      \field{title}{An analysis of models describing predator-prey interaction}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{12}
+      \field{year}{1970}
+      \field{urldateera}{ce}
+      \field{pages}{353\bibrangedash 378}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1002/bit.260120305
+      \endverb
+      \verb{file}
+      \verb Canale - 1970 - An analysis of models describing predator-prey int.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\4JLMP5P9\\Canale - 1970 - An analysis of models describing predator-prey int.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1002/bit.260120305
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1002/bit.260120305
+      \endverb
+    \endentry
+    \entry{gakkhar2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cae4ce507acf4011526d9e1ca202642d}{%
+           family={Gakkhar},
+           familyi={G\bibinitperiod},
+           given={Sunita},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b4ff6dbf3db362677b5db81c27f85aff}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Anuraj},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e5be073904db3a589fa56a49990571a9}
+      \strng{fullhash}{e5be073904db3a589fa56a49990571a9}
+      \strng{bibnamehash}{e5be073904db3a589fa56a49990571a9}
+      \strng{authorbibnamehash}{e5be073904db3a589fa56a49990571a9}
+      \strng{authornamehash}{e5be073904db3a589fa56a49990571a9}
+      \strng{authorfullhash}{e5be073904db3a589fa56a49990571a9}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A three species Hastings and Powell (HP) food chain model involving another predator of top prey is proposed and studied. The modiﬁed food web model is analyzed to obtain the different conditions for which system exhibits stability around the biological feasible equilibrium points. The permanence is established and global stability of boundary equilibrium point Ex is discussed. It is observed through numerical simulations, that four-dimensional model may show stable dynamics in contrast to chaotic dynamics that occurred in three species food chain. Varieties of dynamical behaviors in the food web are possible depending upon the sharing of food between the two predators of the top prey. The results demonstrate that the additional predator play the crucial role in reducing the complexity in the dynamical behavior of the system.}
+      \field{issn}{0022247X}
+      \field{journaltitle}{Journal of Mathematical Analysis and Applications}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Control of chaos due to additional predator in the {Hastings}–{Powell} food chain model}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{385}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{423\bibrangedash 438}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.jmaa.2011.06.047
+      \endverb
+      \verb{file}
+      \verb Gakkhar et Singh - 2012 - Control of chaos due to additional predator in the.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\53BX6R4P\\Gakkhar et Singh - 2012 - Control of chaos due to additional predator in the.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0022247X11005956
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0022247X11005956
+      \endverb
+    \endentry
+    \entry{hastings1991}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3ef66b2c3dacd04fd85ecf953dbfdf70}{%
+           family={Hastings},
+           familyi={H\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0dc9a4c7bc68d268dab747325287ddb1}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e4927abc735ac8af17c923a89b8a6d95}
+      \strng{fullhash}{e4927abc735ac8af17c923a89b8a6d95}
+      \strng{bibnamehash}{e4927abc735ac8af17c923a89b8a6d95}
+      \strng{authorbibnamehash}{e4927abc735ac8af17c923a89b8a6d95}
+      \strng{authornamehash}{e4927abc735ac8af17c923a89b8a6d95}
+      \strng{authorfullhash}{e4927abc735ac8af17c923a89b8a6d95}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A continuous time model of a food chain incorporating nonlinear functional (and numerical) responses exhibits chaotic dynamics in long-term behavior when biologically reasonable parameter values are chosen. The appearance of chaos in this model suggests that chaotic dynamics may be common in natural food webs.}
+      \field{issn}{00129658}
+      \field{journaltitle}{Ecology}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{Chaos in a {Three}-{Species} {Food} {Chain}}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2019}
+      \field{volume}{72}
+      \field{year}{1991}
+      \field{urldateera}{ce}
+      \field{pages}{896\bibrangedash 903}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.2307/1940591
+      \endverb
+      \verb{file}
+      \verb Hastings_Powell_1991_Chaos in a Three-Species Food.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\T4UCH8TA\\Hastings_Powell_1991_Chaos in a Three-Species Food.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.2307/1940591
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.2307/1940591
+      \endverb
+    \endentry
+    \entry{hastings1993}{article}{}
+      \name{author}{5}{}{%
+        {{hash=3ef66b2c3dacd04fd85ecf953dbfdf70}{%
+           family={Hastings},
+           familyi={H\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5bea4a946b71aabe6d5a78f12cad21c8}{%
+           family={Hom},
+           familyi={H\bibinitperiod},
+           given={Carole\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=f94b20974df160de61c6dac5bee9fbc1}{%
+           family={Ellner},
+           familyi={E\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=775aba394cb4d028323d6fd47ca17427}{%
+           family={Turchin},
+           familyi={T\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0de91d74d5232f68859ce77eb2602895}{%
+           family={Godfray},
+           familyi={G\bibinitperiod},
+           given={H.\bibnamedelimi Charles\bibnamedelima J.},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{72677287edcc47db556c239692e3c2d9}
+      \strng{fullhash}{13676f6d3b12013e01b70922b7e5ad5f}
+      \strng{bibnamehash}{72677287edcc47db556c239692e3c2d9}
+      \strng{authorbibnamehash}{72677287edcc47db556c239692e3c2d9}
+      \strng{authornamehash}{72677287edcc47db556c239692e3c2d9}
+      \strng{authorfullhash}{13676f6d3b12013e01b70922b7e5ad5f}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{journaltitle}{Annual Review of Ecology and Systematics}
+      \field{number}{1}
+      \field{shorttitle}{Chaos in {Ecology}}
+      \field{title}{Chaos in {Ecology}: {Is} {Mother} {Nature} a {Strange} {Attractor}?}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{24}
+      \field{year}{1993}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 33}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1146/annurev.es.24.110193.000245
+      \endverb
+      \verb{file}
+      \verb Hastings et al. - Chaos in Ecology Is Mother Nature a Strange Attra.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\435QAZ79\\Hastings et al. - Chaos in Ecology Is Mother Nature a Strange Attra.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1146/annurev.es.24.110193.000245
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1146/annurev.es.24.110193.000245
+      \endverb
+    \endentry
+    \entry{price1980}{article}{}
+      \name{author}{6}{}{%
+        {{hash=c3379904e6ab027c05396f91a5658af5}{%
+           family={Price},
+           familyi={P\bibinitperiod},
+           given={P\bibnamedelima W},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=60c92d916a9dd646bf1fbf47bd2376ea}{%
+           family={Bouton},
+           familyi={B\bibinitperiod},
+           given={C\bibnamedelima E},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=76fff4c2ca2918ad49adf814797e3e7d}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d0336a3ab72a13703cbc22d3a520e03d}{%
+           family={McPheron},
+           familyi={M\bibinitperiod},
+           given={B\bibnamedelima A},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a0ca3c3f553b18c023523b464eb23595}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={J\bibnamedelima N},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=15c86f1488dca93bed407f9f1ce3aa90}{%
+           family={Weis},
+           familyi={W\bibinitperiod},
+           given={A\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{235bc962528167515248e9ca646ee1ed}
+      \strng{fullhash}{bff82e26387b555c7d74e5430cd153ec}
+      \strng{bibnamehash}{235bc962528167515248e9ca646ee1ed}
+      \strng{authorbibnamehash}{235bc962528167515248e9ca646ee1ed}
+      \strng{authornamehash}{235bc962528167515248e9ca646ee1ed}
+      \strng{authorfullhash}{bff82e26387b555c7d74e5430cd153ec}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0066-4162}
+      \field{journaltitle}{Annual Review of Ecology and Systematics}
+      \field{month}{11}
+      \field{number}{1}
+      \field{shorttitle}{Interactions {Among} {Three} {Trophic} {Levels}}
+      \field{title}{Interactions {Among} {Three} {Trophic} {Levels}: {Influence} of {Plants} on {Interactions} {Between} {Insect} {Herbivores} and {Natural} {Enemies}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{11}
+      \field{year}{1980}
+      \field{urldateera}{ce}
+      \field{pages}{41\bibrangedash 65}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1146/annurev.es.11.110180.000353
+      \endverb
+      \verb{file}
+      \verb Price et al. - 1980 - Interactions Among Three Trophic Levels Influence.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\RUGCV4YJ\\Price et al. - 1980 - Interactions Among Three Trophic Levels Influence.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.annualreviews.org/doi/10.1146/annurev.es.11.110180.000353
+      \endverb
+      \verb{url}
+      \verb http://www.annualreviews.org/doi/10.1146/annurev.es.11.110180.000353
+      \endverb
+    \endentry
+    \entry{rosenzweig1963}{article}{}
+      \name{author}{2}{}{%
+        {{hash=707eb35ba84d280a34360d9873c308c2}{%
+           family={Rosenzweig},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=b310b3e7d08c9f9ad13030192d52f7cf}{%
+           family={MacArthur},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{1d9a9398c0ba5908c805c202e50dbfdd}
+      \strng{fullhash}{1d9a9398c0ba5908c805c202e50dbfdd}
+      \strng{bibnamehash}{1d9a9398c0ba5908c805c202e50dbfdd}
+      \strng{authorbibnamehash}{1d9a9398c0ba5908c805c202e50dbfdd}
+      \strng{authornamehash}{1d9a9398c0ba5908c805c202e50dbfdd}
+      \strng{authorfullhash}{1d9a9398c0ba5908c805c202e50dbfdd}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-0147, 1537-5323}
+      \field{journaltitle}{The American Naturalist}
+      \field{month}{7}
+      \field{number}{895}
+      \field{title}{Graphical {Representation} and {Stability} {Conditions} of {Predator}-{Prey} {Interactions}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{97}
+      \field{year}{1963}
+      \field{urldateera}{ce}
+      \field{pages}{209\bibrangedash 223}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1086/282272
+      \endverb
+      \verb{file}
+      \verb Rosenzweig et MacArthur - 1963 - Graphical Representation and Stability Conditions .pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\EVR9LECB\\Rosenzweig et MacArthur - 1963 - Graphical Representation and Stability Conditions .pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.journals.uchicago.edu/doi/10.1086/282272
+      \endverb
+      \verb{url}
+      \verb https://www.journals.uchicago.edu/doi/10.1086/282272
+      \endverb
+    \endentry
+    \entry{rosenzweig1973}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d5639655f64eca2277400764c5cb155c}{%
+           family={Rosenzweig},
+           familyi={R\bibinitperiod},
+           given={Michael\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d5639655f64eca2277400764c5cb155c}
+      \strng{fullhash}{d5639655f64eca2277400764c5cb155c}
+      \strng{bibnamehash}{d5639655f64eca2277400764c5cb155c}
+      \strng{authorbibnamehash}{d5639655f64eca2277400764c5cb155c}
+      \strng{authornamehash}{d5639655f64eca2277400764c5cb155c}
+      \strng{authorfullhash}{d5639655f64eca2277400764c5cb155c}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-0147, 1537-5323}
+      \field{journaltitle}{The American Naturalist}
+      \field{month}{3}
+      \field{number}{954}
+      \field{title}{Exploitation in {Three} {Trophic} {Levels}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{volume}{107}
+      \field{year}{1973}
+      \field{urldateera}{ce}
+      \field{pages}{275\bibrangedash 294}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1086/282830
+      \endverb
+      \verb{file}
+      \verb Rosenzweig - 1973 - Exploitation in Three Trophic Levels.pdf:C\:\\Users\\Gabriel\\Zotero\\storage\\F5S99TKY\\Rosenzweig - 1973 - Exploitation in Three Trophic Levels.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.journals.uchicago.edu/doi/10.1086/282830
+      \endverb
+      \verb{url}
+      \verb https://www.journals.uchicago.edu/doi/10.1086/282830
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
