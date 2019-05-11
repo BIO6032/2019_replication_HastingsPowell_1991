@@ -1,15 +1,15 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'article.blg'
-[58] biber-MSWIN32:315> INFO - === 
-[96] Biber.pm:371> INFO - Reading 'article.bcf'
-[284] Biber.pm:889> INFO - Found 9 citekeys in bib section 0
-[314] Biber.pm:4093> INFO - Processing section 0
-[340] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[356] bibtex.pm:1523> INFO - LaTeX decoding ...
-[400] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography.bib'
-[483] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[484] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[488] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[488] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[516] bbl.pm:636> INFO - Writing 'article.bbl' with encoding 'UTF-8'
-[521] bbl.pm:739> INFO - Output to article.bbl
+[37] biber-MSWIN32:315> INFO - === 
+[65] Biber.pm:371> INFO - Reading 'article.bcf'
+[188] Biber.pm:889> INFO - Found 9 citekeys in bib section 0
+[205] Biber.pm:4093> INFO - Processing section 0
+[222] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[232] bibtex.pm:1523> INFO - LaTeX decoding ...
+[268] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography.bib'
+[339] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[339] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[340] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[340] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[355] bbl.pm:636> INFO - Writing 'article.bbl' with encoding 'UTF-8'
+[359] bbl.pm:739> INFO - Output to article.bbl
