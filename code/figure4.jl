@@ -83,8 +83,9 @@ fig4c = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 xlim=(2.25,2.6), ylim=(11.4,12.8),
                 xlabel="b1", ylabel="Zmax", legend=false,
                 grid=:none)
+# Fig.4 - Combine A,B,C
+fig4 = plot(fig4a, fig4b, fig4c, layout=(3,1),
+            size=(450,900), titlefontsize=10)
 
 ## Export figures
-savefig(fig4a, "article/figures/fig4a")
-savefig(fig4b, "article/figures/fig4b")
-savefig(fig4c, "article/figures/fig4c")
+savefig(fig4, "article/figures/fig4")

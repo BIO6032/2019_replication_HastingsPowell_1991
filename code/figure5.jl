@@ -59,9 +59,10 @@ fig5a = plot(sol_x_b3[ind_xyz_b3], sol_y_b3[ind_xyz_b3],
     seriestype=:scatter,
     xaxis=("x(n)", (xmin, xmax), xmin:0.01:xmax),
     yaxis=("y(n)", (ymin, ymax), ymin:0.005:ymax),
-    xgrid = :none, ygrid = :none)
+    xgrid = :none, ygrid = :none,
+    title="A", titleloc=:left)
 
-savefig(fig5a, "article\\figures\\fig5a") # export figure
+#savefig(fig5a, "article\\figures\\fig5a") # export figure
 
 
 
@@ -75,10 +76,11 @@ fig5b = plot(sol_x_b3[ind_n_b3], sol_x_b3[ind_nplus1_b3],
     seriestype=:scatter,
     xaxis=("x(n)", (xmin, xmax), xmin:0.005:xmax),
     yaxis=("x(n+1)", (xmin, xmax), xmin:0.005:xmax),
-    xgrid = :none, ygrid = :none)
+    xgrid = :none, ygrid = :none,
+    title="B", titleloc=:left)
 plot!(xmin:0.01:xmax, xmin:0.01:xmax , color = :black)
 
-savefig(fig5b, "article\\figures\\fig5b") # export figure
+#savefig(fig5b, "article\\figures\\fig5b") # export figure
 
 
 
@@ -89,7 +91,7 @@ fig2d = plot(sol_b3,vars=(1,2,3),
             yaxis=("y", :flip),
             zaxis=("z"),
             grid=:none,
-            legend =:none)
+            legend =:none, size=(600,600))
 
 savefig(fig2d, "article\\figures\\fig2d") # export figure
 
@@ -145,9 +147,10 @@ fig5c = plot(sol_x_b6[ind_xyz_b6], sol_y_b6[ind_xyz_b6],
     seriestype=:scatter,
     xaxis=("x(n)", (xmin, xmax), xmin:0.02:xmax),
     yaxis=("y(n)", (ymin, ymax), 0:0.02:ymax),
-    xgrid = :none, ygrid = :none)
+    xgrid = :none, ygrid = :none,
+    title="C", titleloc=:left)
 
-savefig(fig5c, "article\\figures\\fig5c") # export figure
+#savefig(fig5c, "article\\figures\\fig5c") # export figure
 
 
 
@@ -161,12 +164,15 @@ fig5d = plot(sol_x_b6[ind_n_b6], sol_x_b6[ind_nplus1_b6],
     seriestype=:scatter,
     xaxis=("x(n)", (xmin, xmax), xmin:0.01:xmax),
     yaxis=("x(n+1)", (xmin, xmax), xmin:0.01:xmax),
-    xgrid = :none, ygrid = :none)
+    xgrid = :none, ygrid = :none,
+    title="D", titleloc=:left)
 plot!(xmin:0.01:xmax, xmin:0.01:xmax, color = :black)
 
-savefig(fig5d, "article\\figures\\fig5d") # export figure
+#savefig(fig5d, "article\\figures\\fig5d") # export figure
 
-
+# Export complete fig5
+fig5 = plot(fig5a, fig5b, fig5c, fig5d, layout=4, titlefontsize=10)
+savefig(fig5, "article/figures/fig5")
 
 #Teacup (Three-dimentional phase plot)
 # b1 = 6.0
@@ -176,7 +182,8 @@ fig2d2 = plot(sol_b6,vars=(1,2,3),
             yaxis=("y",:flip),
             zaxis=("z"),
             grid=:none,
-            legend =:none)
+            legend =:none,
+            size=(600,600))
 
 # Export figure
 savefig(fig2d2, "article\\figures\\fig2d2") # export figure

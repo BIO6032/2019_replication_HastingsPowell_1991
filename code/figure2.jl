@@ -17,15 +17,15 @@ sol = solve(prob) #have to make sure which alg (RK4?) and reltol (1e-10?) are co
 ###Figure 2
 fig2a = plot(sol,vars=(0,1), xlim=(5000,6500), ylim=(0,1),
         xlabel="time", ylabel="x", linewidth=0.01, leg=false,
-        grid=:none) #2a
+        grid=:none, title="A", titleloc=:left) #2a
 fig2b = plot(sol,vars=(0,2), xlim=(5000,6500), ylim=(0,0.5),
         xlabel="time", ylabel="y",linewidth=0.01,leg=false,
-        grid=:none) #2b
+        grid=:none, title="B", titleloc=:left) #2b
 fig2c = plot(sol,vars=(0,3), xlim=(5000,6500), ylim=(7,11),
         xlabel="time", ylabel="z", linewidth=0.01,leg=false,
-        grid=:none) #2c
+        grid=:none, title="C", titleloc=:left) #2c
+fig2 = plot(fig2a, fig2b, fig2c, layout=(3,1),
+                size=(450,900), titlefontsize=10)
 
 ## Export figures
-savefig(fig2a, "article/figures/fig2a")
-savefig(fig2b, "article/figures/fig2b")
-savefig(fig2c, "article/figures/fig2c")
+savefig(fig2, "article/figures/fig2")
