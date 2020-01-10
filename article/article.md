@@ -12,7 +12,7 @@ csl: chicago-author-date.csl
 One of the main aspects of a biological community is its food web.
 The first models of population dynamics generally considered the interactions between only
 two species (e.g., @canale1970; @rosenzweig1963). However, in nature, food webs wherein
-two species only influence the behavior of the network are quite uncommon -- most networks
+two species only influence the behaviour of the network are quite uncommon -- most networks
 are far more complex (@hastings1991). Therefore, several researchers asserted that every
 food web study should involve at least three species in order to capture that complexity
 (@price1980; @rosenzweig1973).
@@ -63,7 +63,7 @@ The parameter values used in this paper are the same as the ones in the original
 (@tbl:table1). However, the initial conditions of the simulations (i.e. the values of $x$,
 $y$ and $z$ at the start) were not given in the original paper.
 This is an important point, as the initial conditions strongly affect the simulations,
-particularly in the context of chaotic behavior.
+particularly in the context of chaotic behaviour.
 We knew from figure 3 of the original paper that $x \approx 0.75$, and we tried to
 approximate $y$ and $z$ by trial and error.
 We chose initial conditions in all of our simulations to give the closest matching
@@ -84,7 +84,7 @@ the same initial conditions.
 : Nondimensional parameters and the values used in the simulations {#tbl:table1}
 
 As noted by Hastings & Powell, numerical integration is the only way to investigate the
-global dynamical behavior of the system.
+global dynamical behaviour of the system.
 We used *Julia version 1.1.0* (@bezanson2017), along with packages `DifferentialEquations.jl` (@rackauckas2017) to
 compute the numerical integrations and `ParameterizedFunctions.jl` (@rackauckas2017) to simplify the parameterized
 function call, as well as `Plots.jl` to represent our results.
@@ -96,11 +96,11 @@ To fully replicate the key findings of the original paper, we focussed on replic
 original figures.
 Here we describe the steps we took for figures 2, 3, 4 and 5 from the original paper.
 
-Figure 2 illustrated the chaotic behavior of the system in time for each species.
+Figure 2 illustrated the chaotic behaviour of the system in time for each species.
 In order to replicate it, we followed Hastings & Powell's method and let our system run
 for 10 000 time steps.
-We then represented the system's behavior by plotting the species nondimensional variables
-against time (between time steps 5000 and 6500, which eliminates transient behavior), as
+We then represented the system's behaviour by plotting the species nondimensional variables
+against time (between time steps 5000 and 6500, which eliminates transient behaviour), as
 well as a three dimensional phase plot of the three species (for all time steps).
 Note that in the case of the three dimensional phase plot, we had to set RK4 as the
 solving algorithm, as well as a relative tolerance of $1e-14$; otherwise, the
@@ -110,24 +110,24 @@ In order to illustrate the dynamics of the model, we created a Graphics Intercha
 and $z$ for the selected parameters (in supplement of this paper).
 
 Figure 3 showed the divergence of trajectories caused by a small change in initial
-conditions when the system exhibited chaotic behavior.
+conditions when the system exhibited chaotic behaviour.
 To replicate the figure, we plotted the trajectory for species $x$ between time steps 0
 and 500 starting at $x$ = 0.77, then changed the initial $x$ value by 0.01 (to $x$ =0.78)
 and plotted the new trajectory for the same interval on the same graph.
 
-Figure 4 illustrated the appearance of chaotic behavior as a function of changes in $b_1$.
+Figure 4 illustrated the appearance of chaotic behaviour as a function of changes in $b_1$.
 To replicate it, we constructed a bifurcation diagram for species $z$ where we varied
 values of $b_1$ from 2.2 to 6.2 in steps of 0.01. However, our approach had to be slightly
 different. Hastings & Powell constructed what we consider a special type of bifurcation
 diagram, representing only the maxima of $z$ as a function of $b_1$, rather than all
-possible values in the system's behavior, as in a typical logistic bifurcation diagram.
+possible values in the system's behaviour, as in a typical logistic bifurcation diagram.
 This raised the problem of correctly identifying the maximum values in the cycling
 dynamic. Moreover, Hastings & Powell mentioned that, in order to clarify their figure,
 they eliminated points resulting from the secondary local maxima in the cycling dynamics
 of species $z$, but they did not provide details on how they identified such points.
 Hence, we adopted the following method:
 1) we selected the 1000 last solutions for our system between time steps 1 and 10 000, in
-order to eliminate transient behavior;
+order to eliminate transient behaviour;
 2) we selected the values that were greater than both their preceding and following
 values, which identified local maxima only;
 and 3) we only kept values that were greater than a given threshold of the cycle's maximal
@@ -135,20 +135,20 @@ amplitude, in order to remove secondary local maxima.
 We determined by trial and errors that the best threshold was 66%, as it best removed
 values in apparent second branches of $b_1$ while keeping the values in the primary
 branch. We note however that for some values of $b_1$, the true solutions of the system
-were unstable and that the system did not reach a cycling behavior within 10 000 steps.
+were unstable and that the system did not reach a cycling behaviour within 10 000 steps.
 For these values of $b_1$ (37 values, all between 5.01 and 6.2), we could not present any
 values of $z$ in our bifurcation diagram.
 
 Hastings & Powell mentioned in their original paper that they also examined the system's
-behavior when varying $b_2$ instead of $b_1$, although they did not present the results.
-We examined the same behavior by constructing another bifurcation diagram of $z$ for
+behaviour when varying $b_2$ instead of $b_1$, although they did not present the results.
+We examined the same behaviour by constructing another bifurcation diagram of $z$ for
 values of $b_2$ varying from 1.5 to 3.2, using the same method as described above.
-We fixed $b_1 = 3.0$, as it is the example used to illustrate chaotic behavior throughout
+We fixed $b_1 = 3.0$, as it is the example used to illustrate chaotic behaviour throughout
 Hastings & Powell's paper.
 
 Figure 5 illustrated another diagnostic feature of chaos, slopes of high magnitude on a
 Poincaré map, for values of $b_1$ where the bifurcation diagram suggested chaotic
-behavior. In order to replicate this figure, we solved the system of differential
+behaviour. In order to replicate this figure, we solved the system of differential
 equations using the abovementioned algorithm RK4, as well as a relative tolerance of
 $1e-14$. We used $b_1 = 3.0$ and $b_1 = 6.0$, as in the original paper, to replicate its
 subfigures a-b and c-d, respectively.
@@ -197,10 +197,10 @@ of the local maxima and minima of the dimensionless variables.
 Indeed, $x$ varies approximately from 0.2 to 1.0, $y$ from 0.0 to 0.4, and $z$ from 7.5 to
 10.5 (@fig:fig2), as seen in the original paper.
 
-Second, the time series of $x$ from $t = 0$ to $500$ supports the chaotic behavior of the
+Second, the time series of $x$ from $t = 0$ to $500$ supports the chaotic behaviour of the
 system, with slightly different initial conditions leading to increasingly different
 trajectories(@fig:fig3). The values themselves are almost identical to Hastings & Powell's
-until $t \approx 250$, at which point they start to diverge, but this behavior was to be
+until $t \approx 250$, at which point they start to diverge, but this behaviour was to be
 expected without the exact same initial conditions.
 
 Third, our bifurcation diagrams (@fig:fig4) have the same general shapes as the ones of
@@ -233,10 +233,10 @@ was similar to the one in Hastings & Powell's paper.
 # Discussion
 
 We were able to replicate the chaotic behaviour displayed by Hastings & Powell's model.
-The resulting behavior is indeed very sensible to the initial conditions, showing
+The resulting behaviour is indeed very sensible to the initial conditions, showing
 increasingly diverging trajectories (@fig:fig3) for slightly different parameters, as well
 as unending oscillations (@fig:fig2). The bifurcation diagrams (@fig:fig4) further confirm
-the existence of chaos by illustrating the presence of cyclic behavior for some values and
+the existence of chaos by illustrating the presence of cyclic behaviour for some values and
 chaotic intervals for others, hence the extreme sensibility of the system to $b_1$ values.
 As for the Poincaré sections (@fig:fig5 (a, c)), Hastings & Powell plotted (x,y)
 coordinates of points of the phase plots that theoretically coincided with the plane in
@@ -249,7 +249,7 @@ For @fig:fig2 and @fig:fig3, the shape of the cycles and oscillations are simila
 Hastings and Powell's.
 As mentioned earlier, the slight differences are due to the fact that we could not use the
 exact same initial conditions as the original authors.
-Such difference is to be expected with a system exhibiting chaotic behavior and do not
+Such difference is to be expected with a system exhibiting chaotic behaviour and do not
 alter the conclusions.
 
 The difference between our @fig:fig4 and Hastings & Powell's bifurcation diagram is more
@@ -270,8 +270,8 @@ integration in our two studies.
 It is possible that the relationship between the parameters at this point is such that a
 small difference in algorithm might have an important impact.
 It is also possible that their algorithm came up with an unstable solution and a system
-that did not reach cycling behavior, such as ours for certain values past $b_1$ = 5.01,
-but that Hastings & Powell's method selected some values anyways, explaining the behavior
+that did not reach cycling behaviour, such as ours for certain values past $b_1$ = 5.01,
+but that Hastings & Powell's method selected some values anyways, explaining the behaviour
 at $b_1$ = 3.1.
 
 While we also found chaos for values of $b_2$ other than the default one of 2.0, both
@@ -279,7 +279,7 @@ smaller or greater, we do not totally agree with Hastings & Powell that "chaos i
 likely for larger values of $b_2$". As @fig:figS1, chaos can be quite likely for both
 smaller or larger values.
 We find important to note, however, that at a certain value of $b_2$, $z$ converges and
-starts to crash, thus exhibiting non chaotic behavior within a given range of $b_1$
+starts to crash, thus exhibiting non chaotic behaviour within a given range of $b_1$
 values. This crash is to be expected when looking at the original dimensional parameters,
 so it is possible that Hastings & Powell simply chose not to reach this limit in their
 analyses, as they were only interested in biologically reasonable parameters likely to
@@ -294,7 +294,7 @@ Although we were able to precisely replicate the Poincaré sections for $b_1$ = 
 For $b_1$ = 3.0 (@fig:fig5 (b)), it lacked some points of the phase plots and included
 others that were closed yet non-coincident with the plane.
 For $b_1$ = 6.0 (@fig:fig5 (d)), the discrepancy was more obvious, and might be due to the
-more chaotic behavior of the system under this parameter, observed for example from the
+more chaotic behaviour of the system under this parameter, observed for example from the
 larger width of its "handle" (compare axis intervals of @fig:fig5 (a, c)).
 
 We have succeeded in replicating Hastings & Powell's model and its main findings, as our
@@ -310,7 +310,7 @@ local maxima or the boundaries of the Poincaré sections and maps).
 Hence, our replication is somewhat not very flexible and possibly could not be applied to
 a broader range of parameter values.
 We suggest that an interesting step forward would be to train machine-learning algorithms,
-such as neural networks, to identify chaotic behavior and its boundaries, in order to
+such as neural networks, to identify chaotic behaviour and its boundaries, in order to
 obtain an even better performing implementation.
 
 ![ Time series of the nondimensional variables (a) $x$, (b) $y$ and (c) $z$, for $t$ ranging from 5000 to 6500 ($x$ = 1.0, $y$ = 1.0, and $z$ = 1.0 as initial conditions). The parameter values used in the simulations are given in @tbl:table1 ($b_1$ = 3.0). This figure replicates fig. 2 (a-b-c) of Hastings & Powell.](figures/fig2.png){#fig:fig2}
