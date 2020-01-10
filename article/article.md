@@ -42,7 +42,7 @@ The parameter values used in this paper are the same as the ones in the original
 
 : Nondimensional parameters and the values used in the simulations {#tbl:table1}
 
-As noted by Hastings & Powell, numerical integration is the only way to investigate the global dynamical behavior of the system. We used *Julia version 1.1.0*  (@bezanson2017), along with packages "DifferentialEquations.jl" <!-- (Rackauckas et al.) --> to compute the numerical integrations, "ParameterizedFunctions.jl" to simplify the parameterized function call, and "Plot.jl" to represent our results. We let the `solve` function select the appropriate algorithm to solve our differential equations. In our implementation, it selected a composite algorithm combining, amongst others, algorithms Tsit5 and Rosenbrock23.
+As noted by Hastings & Powell, numerical integration is the only way to investigate the global dynamical behavior of the system. We used *Julia version 1.1.0*  (@bezanson2017), along with packages `DifferentialEquations.jl` (@rackauckas2017) to compute the numerical integrations and `ParameterizedFunctions.jl` (@rackauckas2017) to simplify the parameterized function call, as well as `Plots.jl` to represent our results. We let the `solve` function select the appropriate algorithm to solve our differential equations. In our implementation, it selected a composite algorithm combining, amongst others, algorithms Tsit5 and Rosenbrock23.
 
 To fully replicate the key findings of the original paper, we focussed on replicating
 the original figures. Here we describe the steps we took for figures 2, 3, 4 and 5 from the original paper.
