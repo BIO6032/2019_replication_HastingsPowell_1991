@@ -1,9 +1,6 @@
 ### Hastings & Powell 1991
 ### Model equations
 
-### Packages
-using ParameterizedFunctions
-
 ### Define parameters and equations
 f(u,a,b)=a*u/(1+b*u)
 

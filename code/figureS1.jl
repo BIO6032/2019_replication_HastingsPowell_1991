@@ -3,12 +3,6 @@
 
 ### Figure S1 (Bifurcation diagram)
 
-# Load model
-include("HPmodel.jl")
-
-# Packages
-using Plots, DifferentialEquations
-
 ## Wrap in function
 # b1val : value of b1
 # b2low : lower limit of b2 values to examine

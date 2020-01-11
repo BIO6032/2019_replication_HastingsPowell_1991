@@ -1,13 +1,6 @@
 ### Hastings & Powell 1991
 ## Reproducing teacup figure (figure 2D) and figure 5
 
-include("HPmodel.jl")
-
-# Packages
-using Plots, DifferentialEquations
-
-
-
 #### FIGURES 2D (=5E), 5A and 5B ####
 #### b1 = 3.0
 

@@ -1,11 +1,6 @@
 ###Hastings & Powell 1991
 ### Reproducing figure 3
 
-include("HPmodel.jl")
-
-#Packages
-using Plots, DifferentialEquations
-
 #initial conditions serie 1
 u0=[0.77,0.16,9.9]   #initial conditions for x,y,z
 tspan=(0.0,10000) #timespan

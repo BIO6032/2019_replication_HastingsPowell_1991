@@ -3,12 +3,6 @@
 
 ### Figure 4 (Bifurcation diagram)
 
-# Load model
-include("HPmodel.jl")
-
-# Packages
-using Plots, DifferentialEquations
-
 ## Define initial parameters
 p = a1,a2,b1,b2,d1,d2 = [5.0,0.1,2.0,2.0,0.4,0.01]
 u0 = [1.0,1.0,1.0]
