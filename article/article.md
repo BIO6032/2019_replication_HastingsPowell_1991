@@ -13,22 +13,22 @@ One of the main aspects of a biological community is its food web.
 The first models of population dynamics generally considered the interactions between only
 two species (e.g., @canale1970; @rosenzweig1963). However, in nature, food webs wherein
 two species only influence the behaviour of the network are quite uncommon -- most networks
-are far more complex (@hastings1991). Therefore, several researchers asserted that every
+are far more complex [@hastings1991]. Therefore, several researchers asserted that every
 food web study should involve at least three species in order to capture that complexity
-(@price1980; @rosenzweig1973).
+[@price1980; @rosenzweig1973].
 
 At first, the principal interest of food web researchers was in equilibrium analysis
 because they assumed that what was observed in nature represented an equilibrium state.
 Afterwards, different studies declared that chaos played an important role in ecological
 models. The simplest definition of chaos is the extreme sensitivity of a system to its
-initial conditions (@hastings1993). This concept has been incorporated in population
+initial conditions [@hastings1993]. This concept has been incorporated in population
 dynamics since the mid-1970's.
 Since then, many papers reinforced the importance of chaos in ecology.
 
 @hastings1991, who studied chaos in a continuous time model of a food web including three
 species, contributed considerably to the significance and understanding of this subject.
 Their pioneering study led to many other papers on food webs dynamics and chaos
-(@brose2006; @gakkhar2012). Replicating this kind of paper is important for many reasons.
+[@brose2006; @gakkhar2012]. Replicating this kind of paper is important for many reasons.
 For example, we can compare our results, obtained using current technologies, with theirs;
 we can also make available the code written to recreate the model.
 In the current paper, we used the same equations and parameters values as Hastings &
@@ -85,8 +85,8 @@ the same initial conditions.
 
 As noted by Hastings & Powell, numerical integration is the only way to investigate the
 global dynamical behaviour of the system.
-We used *Julia version 1.1.0* (@bezanson2017), along with packages `DifferentialEquations.jl` (@rackauckas2017) to
-compute the numerical integrations and `ParameterizedFunctions.jl` (@rackauckas2017) to simplify the parameterized
+We used *Julia version 1.1.0* [@bezanson2017], along with packages `DifferentialEquations.jl` [@rackauckas2017] to
+compute the numerical integrations and `ParameterizedFunctions.jl` [@rackauckas2017] to simplify the parameterized
 function call, as well as `Plots.jl` to represent our results.
 We let the `solve` function select the appropriate algorithm to solve our differential
 equations. In our implementation, it selected a composite algorithm combining, amongst
@@ -314,6 +314,10 @@ such as neural networks, to identify chaotic behaviour and its boundaries, in or
 obtain an even better performing implementation.
 
 ![ Time series of the nondimensional variables (a) $x$, (b) $y$ and (c) $z$, for $t$ ranging from 5000 to 6500 ($x$ = 1.0, $y$ = 1.0, and $z$ = 1.0 as initial conditions). The parameter values used in the simulations are given in @tbl:table1 ($b_1$ = 3.0). This figure replicates fig. 2 (a-b-c) of Hastings & Powell.](figures/fig2.png){#fig:fig2}
+# References
+
+::: {#refs}
+:::
 
 ![ Three-dimensional phase plot of species $x$, $y$ and $z$ for $t$ ranging from 1 to 10 000 ($x$ = 0.7, $y$ = 0.2, and $z$ = 8.0 as initial conditions). The parameter values used in the simulations are given in @tbl:table1 ($b_1$ = 3.0). This figure replicates fig. 2 (d) of Hastings & Powell.](figures/fig2d.png){#fig:fig2d}
 
