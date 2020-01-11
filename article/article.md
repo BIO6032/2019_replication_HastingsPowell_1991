@@ -1,6 +1,6 @@
 ---
 title: "Chaos in a Three-Species Food Chain"
-author: "Francis Banville, Élodie Basque and Gabriel Dansereau"
+author: "Francis Banville, Élodie Basque, Gabriel Dansereau, Timothée Poisot, Andrew MacDonald"
 bibliography: bibliography.bib
 link-citations: true
 geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"

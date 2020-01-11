@@ -84,7 +84,7 @@ fig2d = plot(sol_b3,vars=(1,2,3),
             yaxis=("y", :flip),
             zaxis=("z"),
             grid=:none,
-            legend =:none, size=(600,600))
+            legend =:none, size=(600,600), c=:black)
 
 savefig(fig2d, joinpath("..", "article", "figures", "fig2d")) # export figure
 
@@ -176,7 +176,7 @@ fig2d2 = plot(sol_b6,vars=(1,2,3),
             zaxis=("z"),
             grid=:none,
             legend =:none,
-            size=(600,600))
+            size=(600,600), c=:black)
 
 # Export figure
 savefig(fig2d2, joinpath("..", "article", "figures", "fig2d2")) # export figure
