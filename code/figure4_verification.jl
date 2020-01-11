@@ -111,9 +111,9 @@ plot(Z[:,221], xlim=(0,1000))
 plot(Z[:,301], xlim=(0,1000))
 
 ## Export figures
-savefig(fig4a, "article/figures/fig4a")
-savefig(fig4b, "article/figures/fig4b")
-savefig(fig4c, "article/figures/fig4c")
+savefig(fig4a, joinpath("..", "article", "figures", "fig4a")
+savefig(fig4b, joinpath("..", "article", "figures", "fig4b")
+savefig(fig4c, joinpath("..", "article", "figures", "fig4c")
 
 # using parameters from Andrew's bifurcation diagram
 scatter(pts_maxloc[:,1], pts_maxloc[:,2],
