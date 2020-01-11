@@ -2,9 +2,16 @@
 title: "Chaos in a Three-Species Food Chain"
 author: "Francis Banville, Élodie Basque and Gabriel Dansereau"
 bibliography: bibliography.bib
+link-citations: true
 geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
 output: pdf_document
-csl: chicago-author-date.csl
+fontfamily: kpfonts
+fontsize: 11pt
+header-includes:
+  - \usepackage{setspace}
+  - \doublespacing
+  - \usepackage{lineno}
+  - \linenumbers
 ---
 
 # Introduction
