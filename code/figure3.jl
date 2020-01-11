@@ -23,4 +23,4 @@ fig3=plot!(sol,vars=1,xlim=(0,500), ylim=(0,1), linestyle=:dash,
         grid=:none, legend=false, xlabel="time", ylabel="x")
 
 ## Export figures
-savefig(fig3, joinpath("..", "article", "figures", "fig3")
+savefig(fig3, joinpath("..", "article", "figures", "fig3"))

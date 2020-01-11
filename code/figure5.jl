@@ -86,7 +86,7 @@ fig2d = plot(sol_b3,vars=(1,2,3),
             grid=:none,
             legend =:none, size=(600,600))
 
-savefig(fig2d, joinpath("..", "article", "figures", "fig2d") # export figure
+savefig(fig2d, joinpath("..", "article", "figures", "fig2d")) # export figure
 
 
 
@@ -165,7 +165,7 @@ plot!(xmin:0.01:xmax, xmin:0.01:xmax, color = :black)
 
 # Export complete fig5
 fig5 = plot(fig5a, fig5b, fig5c, fig5d, layout=4, titlefontsize=10)
-savefig(fig5, joinpath("..", "article", "figures", "fig5")
+savefig(fig5, joinpath("..", "article", "figures", "fig5"))
 
 #Teacup (Three-dimentional phase plot)
 # b1 = 6.0
@@ -179,7 +179,7 @@ fig2d2 = plot(sol_b6,vars=(1,2,3),
             size=(600,600))
 
 # Export figure
-savefig(fig2d2, joinpath("..", "article", "figures", "fig2d2") # export figure
+savefig(fig2d2, joinpath("..", "article", "figures", "fig2d2")) # export figure
 
 
 

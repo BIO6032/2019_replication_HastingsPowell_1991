@@ -82,4 +82,4 @@ fig4 = plot(fig4a, fig4b, fig4c, layout=(3,1),
             size=(450,900), titlefontsize=10)
 
 ## Export figures
-savefig(fig4, joinpath("..", "article", "figures", "fig4")
+savefig(fig4, joinpath("..", "article", "figures", "fig4"))

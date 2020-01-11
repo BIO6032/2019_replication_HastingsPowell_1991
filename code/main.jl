@@ -7,4 +7,7 @@ using DifferentialEquations
 include("HPmodel.jl")
 
 # Make the figures
-include("figure2.jl")
+for figfile in filter(f -> isfile(f)&startswith(f, "figure"), readdir())
+    @info "Running $figfile"
+    include(figfile)
+end
