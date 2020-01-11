@@ -313,18 +313,31 @@ We suggest that an interesting step forward would be to train machine-learning a
 such as neural networks, to identify chaotic behaviour and its boundaries, in order to
 obtain an even better performing implementation.
 
-![ Time series of the nondimensional variables (a) $x$, (b) $y$ and (c) $z$, for $t$ ranging from 5000 to 6500 ($x$ = 1.0, $y$ = 1.0, and $z$ = 1.0 as initial conditions). The parameter values used in the simulations are given in @tbl:table1 ($b_1$ = 3.0). This figure replicates fig. 2 (a-b-c) of Hastings & Powell.](figures/fig2.png){#fig:fig2}
 # References
 
 ::: {#refs}
 :::
 
+\newpage
+
+![ Time series of the nondimensional variables (a) $x$, (b) $y$ and (c) $z$, for $t$ ranging from 5000 to 6500 ($x$ = 1.0, $y$ = 1.0, and $z$ = 1.0 as initial conditions). The parameter values used in the simulations are given in @tbl:table1 ($b_1$ = 3.0). This figure replicates fig. 2 (a-b-c) of Hastings & Powell.](figures/fig2.png){#fig:fig2 height=90%}
+
+\newpage
+
 ![ Three-dimensional phase plot of species $x$, $y$ and $z$ for $t$ ranging from 1 to 10 000 ($x$ = 0.7, $y$ = 0.2, and $z$ = 8.0 as initial conditions). The parameter values used in the simulations are given in @tbl:table1 ($b_1$ = 3.0). This figure replicates fig. 2 (d) of Hastings & Powell.](figures/fig2d.png){#fig:fig2d}
+
+\newpage
 
 ![ Time series of $x$, for $t$ ranging from 0 to 500. The solid and dashed lines have  $x$ = 0.77 and $x$ = 0.78 as initial conditions respectively ($y$ = 0.16 and $z$ = 9.9 as initial conditions are unchanged). The parameter values used in the simulations are given in @tbl:table1 ($b_1$ = 3.0). This figure replicates fig. 3 of Hastings & Powell.](figures/fig3.png){#fig:fig3}
 
-![ Bifurcation diagrams of the local maxima of $z$ plotted against $b_1$ ranging from (a) 2.2 to 3.2, (b) 3.0 to 6.2, and (c) 2.25 to 2.6. The other parameter values used in the simulations are given in @tbl:table1 ($x$ = 1.0, $y$ = 1.0, and $z$ = 1.0 as initial conditions). This figure replicates fig. 4 of Hastings & Powell.](figures/fig4.png){#fig:fig4}
+\newpage
+
+![ Bifurcation diagrams of the local maxima of $z$ plotted against $b_1$ ranging from (a) 2.2 to 3.2, (b) 3.0 to 6.2, and (c) 2.25 to 2.6. The other parameter values used in the simulations are given in @tbl:table1 ($x$ = 1.0, $y$ = 1.0, and $z$ = 1.0 as initial conditions). This figure replicates fig. 4 of Hastings & Powell.](figures/fig4.png){#fig:fig4 height=90%}
+
+\newpage
 
 ![ (a) and (b) Poincaré section and map, respectively, for the parameter values given in @tbl:table1 ($b_1$ = 3.0).  (c) and (d) Poincaré section and map for the same parameter values except $b_1$ = 6.0. All sets of initial values are unchanged ($x$ = 0.7, $y$ = 0.2, $z$ = 8.0). The solid lines of equation $x(n+1) = x(n)$ are shown in (b) and (d). This figure replicates fig. 5 of Hastings & Powell, except their fig. 5 (e), which is partly reproduced in our fig. 2 (d).](figures/fig5.png){#fig:fig5}
+
+\newpage
 
 ![ Bifurcation diagrams of the local maxima of $z$ plotted against $b_2$ ranging from 1.5 to 3.2. The other parameter values used in the simulations are given in @tbl:table1 ($x$ = 1.0, $y$ = 1.0, and $z$ = 1.0 as initial conditions, $b_1$ = 3.0).](figures/figS1.png){#fig:figS1}
