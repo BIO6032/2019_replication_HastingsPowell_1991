@@ -64,19 +64,19 @@ fig4a = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(2.2,3.2), ylim=(9.5,13),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none)
+                grid=:none, c=:black, msw=0.0, msc=:black)
 # Fig.4 B)
 fig4b = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(3.0,6.5), ylim=(3.0,10),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none)
+                grid=:none, c=:black, msw=0.0, msc=:black)
 # Fig.4 C)
 fig4c = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(2.25,2.6), ylim=(11.4,12.8),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none)
+                grid=:none, c=:black, msw=0.0, msc=:black)
 # Fig.4 - Combine A,B,C
 fig4 = plot(fig4a, fig4b, fig4c, layout=(3,1),
             size=(450,900), titlefontsize=10)
