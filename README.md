@@ -21,7 +21,7 @@ julia
 ```
 3. Run the following command to install the exact versions of packages (as specified in the Project Environment)
 ```
-import Pkg; Pkg.instantiate(".")
+]instantiate
 ```
 
 `main.jl` can then be run to reproduce all figures. Alternatively, individual scripts in `code/` can be run interactively after running lines 1-15 of `main.jl`.
