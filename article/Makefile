@@ -30,6 +30,6 @@ article.pdf: article.tex content.tex metadata.tex rescience.cls
 	latexmk -pdf -pdflatex="xelatex -interaction=nonstopmode" -use-make article.tex
 
 clean:
-	@latexmk -CA
+	@latexmk -c
 	@rm -f *.bbl
 	@rm -f *.run.xml
