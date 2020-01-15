@@ -41,7 +41,7 @@ results, obtained using current technologies, with theirs; we can also make
 available the code written to recreate the model. In the current paper, we used
 the same equations and parameters values as Hastings & Powell to replicate their
 model. We were able to reproduce all the figures in their paper using *Julia
-v1.1.0*.
+v1.3.0*.
 
 # Methods
 
@@ -91,8 +91,7 @@ same initial conditions.
 : Nondimensional parameters and the values used in the simulations {#tbl:table1}
 
 As noted by Hastings & Powell, numerical integration is the only way to
-investigate the global dynamical behaviour of the system. We used *Julia version
-1.1.0* [@bezanson2017], along with packages `DifferentialEquations.jl`
+investigate the global dynamical behaviour of the system. We used *Julia v1.3.0* [@bezanson2017], along with packages `DifferentialEquations.jl`
 [@rackauckas2017] to compute the numerical integrations and
 `ParameterizedFunctions.jl` [@rackauckas2017] to simplify the parameterized
 function call, as well as `Plots.jl` to represent our results. We let the
