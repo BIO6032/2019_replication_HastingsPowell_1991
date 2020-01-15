@@ -3,12 +3,6 @@
 
 ### Figure S1 (Bifurcation diagram)
 
-# Load model
-include("HPmodel.jl")
-
-# Packages
-using Plots, DifferentialEquations
-
 ## Wrap in function
 # b1val : value of b1
 # b2low : lower limit of b2 values to examine
@@ -94,8 +88,8 @@ figS1_maxloc = b2_behavior(b1val=3.0, b2low=1.5, b2up=3.2,
 figS1_all = b2_behavior(b1val=3.0, out="all")
 
 ## Export figures
-# savefig(figS1_all, "article/figures/figS1_all_b1_3")
-savefig(figS1_maxloc, "article/figures/figS1")
+# savefig(figS1_all, joinpath("..", "article", "figures", "figS1_all_b1_3")
+savefig(figS1_maxloc, joinpath("..", "article", "figures", "figS1"))
 
 # Additionnal examinations
 b2_behavior(b1val=2.0)

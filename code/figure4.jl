@@ -3,12 +3,6 @@
 
 ### Figure 4 (Bifurcation diagram)
 
-# Load model
-include("HPmodel.jl")
-
-# Packages
-using Plots, DifferentialEquations
-
 ## Define initial parameters
 p = a1,a2,b1,b2,d1,d2 = [5.0,0.1,2.0,2.0,0.4,0.01]
 u0 = [1.0,1.0,1.0]
@@ -70,22 +64,22 @@ fig4a = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(2.2,3.2), ylim=(9.5,13),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none)
+                grid=:none, c=:black, msw=0.0, msc=:black)
 # Fig.4 B)
 fig4b = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(3.0,6.5), ylim=(3.0,10),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none)
+                grid=:none, c=:black, msw=0.0, msc=:black)
 # Fig.4 C)
 fig4c = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(2.25,2.6), ylim=(11.4,12.8),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none)
+                grid=:none, c=:black, msw=0.0, msc=:black)
 # Fig.4 - Combine A,B,C
 fig4 = plot(fig4a, fig4b, fig4c, layout=(3,1),
             size=(450,900), titlefontsize=10)
 
 ## Export figures
-savefig(fig4, "article/figures/fig4")
+savefig(fig4, joinpath("..", "article", "figures", "fig4"))
