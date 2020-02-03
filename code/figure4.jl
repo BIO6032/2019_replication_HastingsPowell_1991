@@ -62,24 +62,37 @@ pts_maxloc = points_maxloc[points_maxloc[:,2] .> 0.00,:]
 # Fig.4 A)
 fig4a = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
-                xlim=(2.2,3.2), ylim=(9.5,13),
+                xlim=(2.2,3.2), ylim=(9.5,13.0),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none, c=:black, msw=0.0, msc=:black)
+                grid=:none, c=:black, msw=0.0, msc=:black,
+                title="a", titleloc=:left
+                )
 # Fig.4 B)
 fig4b = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
-                xlim=(3.0,6.5), ylim=(3.0,10),
+                xlim=(3.0,6.5), ylim=(3.0,10.0),
+                xticks=3.0:0.5:6.5, yticks=(3.0:1.0:10.0, string.(3.0:1.0:10.0)),
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none, c=:black, msw=0.0, msc=:black)
+                grid=:none, c=:black, msw=0.0, msc=:black,
+                title="b", titleloc=:left
+                )
 # Fig.4 C)
 fig4c = scatter(pts_maxloc[:,1], pts_maxloc[:,2],
                 markersize=1,
                 xlim=(2.25,2.6), ylim=(11.4,12.8),
+                xticks=2.25:0.05:2.60, yticks=11.1:0.2:12.8,
                 xlabel="b1", ylabel="Zmax", legend=false,
-                grid=:none, c=:black, msw=0.0, msc=:black)
+                grid=:none, c=:black, msw=0.0, msc=:black,
+                title="c", titleloc=:left
+                )
 # Fig.4 - Combine A,B,C
 fig4 = plot(fig4a, fig4b, fig4c, layout=(3,1),
-            size=(450,900), titlefontsize=10)
+            size=(500,900), titlefontsize=15,
+            tickfontsize=15, guidefontsize=15,
+            left_margin=10Plots.mm, right_margin=5Plots.mm,
+            bottom_margin=2Plots.mm,
+            framestyle=:box
+            )
 
 ## Export figures
 savefig(fig4, joinpath("..", "article", "figures", "fig4"))
