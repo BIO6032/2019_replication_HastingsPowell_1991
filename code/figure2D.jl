@@ -16,7 +16,7 @@ sol_x_b3 = sol_b3[1,:] # timeseries for x
 sol_y_b3 = sol_b3[2,:] # timeseries for y
 sol_z_b3 = sol_b3[3,:] # timeseries for z
 
-# Teacup Figures 2D and 5E (Three-dimentional phase plot)
+# Teacup Figures 2D and 5E (Three-dimensional phase plot)
 gr()
 fig2d = plot(sol_x_b3, sol_y_b3, sol_z_b3, #sol_b3,vars=(1,2,3),
              linewidth=0.01, linestyle=:dot,
@@ -77,7 +77,7 @@ TeaCup_sol = TeaCup((dt = 0.05, a1 = 5.0, a2 = 0.1, b1 = 3.0, b2 = 2.0, d1 = 0.4
 plt = plot3d(1, xaxis=("x", (0,1)),
                 yaxis=("y",(0,0.5), :flip),
                 zaxis=("z", (7.5, 10.5)),
-                title = "Animated three-dimentional phase plot",
+                title = "Animated three-dimensional phase plot",
                 marker = :none,
                 legend = :none,
                 grid=:none,
