@@ -17,6 +17,7 @@ TeaCup_sol = TeaCup((dt = 0.05, a1 = 5.0, a2 = 0.1, b1 = 3.0, b2 = 2.0, d1 = 0.4
 
 
 # initialize a 3D plot with 1 empty series
+pyplot()
 plt = plot3d(1, xaxis=("x", (0,1)),
                 yaxis=("y",(0,0.5), :flip),
                 zaxis=("z", (7.5, 10.5)),
@@ -24,10 +25,12 @@ plt = plot3d(1, xaxis=("x", (0,1)),
                 marker = :none,
                 legend = :none,
                 grid=:none,
-                linewidth = 3)
+                linewidth = 1,
+                c=:black)
 
-# build an animated gif by pushing new points to the plot, saving every 10th frame
- @gif for i=1:30000
+# build an animated gif by pushing new points to the plot, saving every 20th frame
+anim = @animate for i=1:20000
     step!(TeaCup_sol)
     push!(plt, TeaCup_sol.x, TeaCup_sol.y, TeaCup_sol.z)
 end every 20
+gif(anim, joinpath("..", "article", "figures", "figure2D.gif"), fps=40)
