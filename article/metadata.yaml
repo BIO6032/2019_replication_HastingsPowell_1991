@@ -10,6 +10,11 @@ title: "[Re] Chaos in a Three-Species Food Chain"
 # List of authors with name, orcid number, email and affiliation
 # Affiliation "*" means contact author
 authors:
+  - name: Gabriel Dansereau
+    orcid: 0000-0002-2212-3584
+    email:
+    affiliations: 1
+
   - name: Francis Banville
     orcid: 0000-0001-9051-0597
     email:
@@ -17,11 +22,6 @@ authors:
 
   - name: Elodie Basque
     orcid:
-    email:
-    affiliations: 1
-
-  - name: Gabriel Dansereau
-    orcid: 0000-0002-2212-3584
     email:
     affiliations: 1
 
