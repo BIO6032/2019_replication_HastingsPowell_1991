@@ -17,7 +17,7 @@ All the scripts required to reproduce the model are in the `code/` subfolder.
 They assume that `code/` is used as the working directory.
 
 #### Initial setup
-To reproduce our project, we recommend the following steps as initial setup, assuming *Julia* is already installed and a UNIX-like terminal is used:
+To reproduce our project, we recommend the following steps as initial setup, assuming *Julia v1.3.1* is already installed and a UNIX-like terminal is used:
 1. Clone this repository
 ```
 git clone https://github.com/BIO6032/2019_replication_HastingsPowell_1991.git
