@@ -24,7 +24,7 @@ Their pioneering study led to many other papers on food webs dynamics and chaos
 For example, we can compare our results, obtained using current technologies, with theirs;
 we can also make available the code written to recreate the model.
 In the current paper, we used the same equations and parameters values as \citet{hastings1991} to replicate their model.
-We were able to reproduce all the figures in their paper using \textit{Julia v1.3.0}.
+We were able to reproduce all the figures in their paper using \textit{Julia v1.3.1}.
 
 \section{Methods}
 
@@ -90,7 +90,7 @@ the same initial conditions.
 
 As noted by \citeauthor{hastings1991}, numerical integration is the only way to investigate the
 global dynamical behaviour of the system.
-We used \textit{Julia v1.3.0} \citep{bezanson2017}, along with packages \verb| DifferentialEquations.jl|
+We used \textit{Julia v1.3.1} \citep{bezanson2017}, along with packages \verb| DifferentialEquations.jl|
 \citep{rackauckas2017} to compute the numerical integrations and \verb|ParameterizedFunctions.jl|
 \citep{rackauckas2017} to simplify the parameterized function call, as well as \verb|Plots.jl| to represent
 our results. We let the \verb|solve()| function select the appropriate algorithm to solve our

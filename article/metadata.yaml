@@ -70,7 +70,7 @@ abstract: "
 Hastings & Powell's model describing chaos in a three-species food chain is a classic in
 ecological modelling.
 Here, we provide a successul reproduction of the model and results from the original
-article, implemented in Julia v1.3.0 and openly accessible online.
+article, implemented in Julia v1.3.1 and openly accessible online.
 The main challenge we faced was the absence of the initial conditions from the
 original article. Our reproduction nonetheless displays the same results, although with slight differences,
 and confirms chaos arising in a three species food chain in continuous time.
