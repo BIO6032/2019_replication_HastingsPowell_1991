@@ -79,7 +79,7 @@ function b2_behavior(;b1val::Float64, b2low::Float64=1.5, b2up::Float64=3.2,out:
           markersize=1,
           xlabel="b2", xlim=(b2low,b2up), xticks=b2low:0.25:b2up,
           ylabel="Zmax", yticks=(0.0:2.0:maximum(results[:,2]), string.(0.0:2.0:maximum(results[:,2]))),
-          legend=false, grid=:none,
+          legend=false, grid=:none, framestyle=:box,
           c=:black)
 end
 
