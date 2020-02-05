@@ -13,14 +13,14 @@ function step!(t::TeaCup)
 end
 
 # solution from initial values
-TeaCup_sol = TeaCup((dt = 0.05, a1 = 5.0, a2 = 0.1, b1 = 3.0, b2 = 2.0, d1 = 0.4, d2 = 0.01, x = 0.7, y = 0.2, z = 8)...)
+TeaCup_sol = TeaCup((dt = 0.05, a1 = 5.0, a2 = 0.1, b1 = 3.0, b2 = 2.0, d1 = 0.4, d2 = 0.01, x = 0.76, y = 0.16, z = 9.9)...)
 
 
 # initialize a 3D plot with 1 empty series
 pyplot()
-plt = plot3d(1, xaxis=("x", (0,1)),
-                yaxis=("y",(0,0.5), :flip),
-                zaxis=("z", (7.5, 10.5)),
+plt = plot3d(1, xlabel="x", xlim=(0.0, 1.0),
+                ylabel="y", ylim=(0.0, 0.5), yflip=true,
+                zlabel="z", zlim=(7.5, 10.5),
                 title = "Animated three-dimensional phase plot",
                 marker = :none,
                 legend = :none,

@@ -5,7 +5,7 @@
 
 ## Define initial parameters
 p = a1,a2,b1,b2,d1,d2 = [5.0,0.1,2.0,2.0,0.4,0.01]
-u0 = [1.0,1.0,1.0]
+u0 = [0.76,0.16,9.9]
 tspan = (0.0,10000.0)
 # b1 values interval
 bs = collect(2.0:0.01:6.2)

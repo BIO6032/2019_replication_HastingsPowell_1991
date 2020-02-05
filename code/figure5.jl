@@ -4,7 +4,7 @@
 #### FIGURES 2D (=5E), 5A and 5B ####
 #### b1 = 3.0
 
-u0=[0.7,0.2,8.0]  #initial conditions for x,y,z
+u0=[0.76,0.16,9.9]  #initial conditions for x,y,z
 tspan=(0.0,10000.0) #timespan
 p_b3 = [5.0,0.1,3.0,2.0,0.4,0.01] # parameter values (a1, a2, b1, b2, c1, c2)
 
