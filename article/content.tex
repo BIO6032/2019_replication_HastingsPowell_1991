@@ -12,20 +12,26 @@ complexity \citep{price1980, rosenzweig1973}.
 At first, the core interest of food web research was in equilibrium analysis, partly based
 on the assumption that communities observed in nature represent a stable equilibrium state
 \citep{hastings1993}.
-Afterwards, different studies declared that chaos played an important role in ecological
-models. The simplest definition of chaos is the extreme sensitivity of a system to its
-initial conditions \citep{hastings1993}. This concept has been incorporated in population
-dynamics since the mid-1970's.
-Since then, many papers reinforced the importance of chaos in ecology.
+However, complex dynamics arise in a system with three or more species, and these are better
+described as chaos rather than stable equilibrium.
+The simplest definition of chaos is the extreme sensitivity of a system to its
+initial conditions \citep{hastings1993}.
+\citet{hastings1991}, who studied chaos in a continuous time model of a food web including
+three species, contributed considerably to the significance and understanding of this subject.
+This study led to many others on food webs dynamics and chaos, which reinforced
+the importance of chaos in ecological modelling \citep{blasius1999, gakkhar2012}.
 
-\citet{hastings1991}, who studied chaos in a continuous time model of a food web including three
-species, contributed considerably to the significance and understanding of this subject.
-Their pioneering study led to many other papers on food webs dynamics and chaos
-\citep{brose2006, gakkhar2012}. Replicating this kind of paper is important for many reasons.
-For example, we can compare our results, obtained using current technologies, with theirs;
-we can also make available the code written to recreate the model.
-In the current paper, we used the same equations and parameters values as \citet{hastings1991} to replicate their model.
-We were able to reproduce all the figures in their paper using \textit{Julia v1.3.1}.
+In this article, we provide a replication of the model from \citet{hastings1991} using the
+same equations and parameter values.
+Replicating a classic study and model like this one is important for many reasons:
+1) we can compare the original results with ones obtained using current technologies,
+ensuring that they can still be reproduced;
+2) we can provide a publicly available and reproducible version of the codes that recreate
+the model.
+We were able to successfully replicate all the figures in the original article using
+\textit{Julia v1.3.1}.
+All the code used to replicate the original model is available alongside this article
+(\url{https://github.com/BIO6032/2019_replication_HastingsPowell_1991}).
 
 \section{Methods}
 
@@ -185,7 +191,6 @@ did not reproduce it.
 The objective of this paper being to reproduce the main results of the original paper, we
 did not reproduce its Fig. 1, which was only a schematic representation of the
 three-species food chain.
-All the code used to replicate the original paper is available alongside the article.
 
 \section{Results}
 
