@@ -1,16 +1,17 @@
 
 \section{Introduction}
 
-One of the main aspects of a biological community is its food web.
-The first models of population dynamics generally considered the interactions between only
-two species (e.g., \citet{canale1970}; \citet{rosenzweig1963}). However, in nature, food webs wherein
-two species only influence the behaviour of the network are quite uncommon -- most
+One of the most important components of an ecological community is its food web.
+Early models of population dynamics generally only considered interactions between
+two species (e.g., \citet{canale1970}; \citet{rosenzweig1963}). However, in nature, food webs wherein only
+two species influence the behaviour of the network are quite uncommon -- most
 networks are far more complex \citep{hastings1991}. Therefore, several researchers asserted
 that every food web study should involve at least three species in order to capture that
 complexity \citep{price1980, rosenzweig1973}.
 
-At first, the principal interest of food web researchers was in equilibrium analysis
-because they assumed that what was observed in nature represented an equilibrium state.
+At first, the core interest of food web research was in equilibrium analysis, partly based
+on the assumption that communities observed in nature represent a stable equilibrium state
+\citep{hastings1993}.
 Afterwards, different studies declared that chaos played an important role in ecological
 models. The simplest definition of chaos is the extreme sensitivity of a system to its
 initial conditions \citep{hastings1993}. This concept has been incorporated in population
@@ -28,8 +29,8 @@ We were able to reproduce all the figures in their paper using \textit{Julia v1.
 
 \section{Methods}
 
-The model formulation used in this paper is the same as the one in the original
-publication. \citeauthor{hastings1991} used a 14 parameter model to represent the three-species
+The model formulation used in this paper is the same as in the original
+publication. \citeauthor{hastings1991} used a 14 parameters model to represent the three-species
 food chain, with $X$, $Y$, and $Z$ as the numbers of the species at the lowest level of
 the food chain, of the species that preys upon $X$, and of the species that preys upon
 $Y$, respectively.
@@ -56,10 +57,10 @@ with
 
 as the functional response.
 
-The parameter values used in this paper are the same as the ones in the original paper
-(\autoref{tbl:table1}). However, the initial conditions of the simulations (i.e. the values of $x$,
+Parameter values used in this paper are the same as in the original paper
+(\autoref{tbl:table1}). However, initial conditions of the simulations (i.e. the values of $x$,
 $y$ and $z$ at the start) were not given in the original paper.
-This is an important point, as the initial conditions strongly affect the simulations,
+This is an important point, as initial conditions strongly affect the simulations,
 particularly in the context of chaotic behaviour.
 We knew from Fig.3 of the original paper that $x \approx 0.76$.
 We tried to approximate $y$ and $z$ by trial and error, and found $x = 0.76$, $y = 0.16$ and
@@ -76,7 +77,7 @@ the same initial conditions.
   \label{tbl:table1}
   \begin{tabular}{c l}
     \hline
-    Nondimensional parameters & Values \\
+    & Values \\
     \hline
     $a_1$ & 5.0 \\
     $b_1$ & 2.0 $\rightarrow$ 6.2 \\
@@ -98,11 +99,11 @@ differential equations.
 In our implementation, it selected a composite algorithm combining, amongst others,
 algorithms Tsit5 and Rosenbrock23.
 
-To fully replicate the key findings of the original paper, we focussed on replicating the
+To fully replicate key findings of the original paper, we focused on replicating
 original figures.
 Here we describe the steps we took for Fig. 2, 3, 4 and 5 from the original paper.
 
-Fig. 2 illustrated the chaotic behaviour of the system in time for each species.
+Fig. 2 illustrates the chaotic behaviour of the system in time for each species.
 In order to replicate it, we followed \citeauthor{hastings1991}'s method and let our system run
 for 10 000 time steps.
 We then represented the system's behaviour by plotting the species nondimensional
@@ -111,17 +112,19 @@ behaviour), as well as a three dimensional phase plot of the three species (for 
 steps). Note that in the case of the three dimensional phase plot, we had to set RK4 as
 the solving algorithm, as well as a relative tolerance of $1e-14$; otherwise, the
 representation was unexpectedly different from the original paper.
+This suggests that the results for this figure in the original article may have been an
+artifact.
 In order to illustrate the dynamics of the model, we created a Graphics Interchange Format
 (GIF) file of the three-dimensional phase plot that showed the trajectories of $x$, $y$
 and $z$ for the selected parameters (\url{https://github.com/BIO6032/2019_replication_HastingsPowell_1991/blob/master/article/figures/figure2D.gif}).
 
-Fig. 3 showed the divergence of trajectories caused by a small change in initial
-conditions when the system exhibited chaotic behaviour.
+Fig. 3 shows the divergence of trajectories caused by a small change in initial
+conditions when the system exhibits chaotic behaviour.
 To replicate the figure, we plotted the trajectory for species $x$ between time steps 0
 and 500 starting at $x = 0.77$, then changed the initial $x$ value by 0.01 (to $x = 0.78$)
 and plotted the new trajectory for the same interval on the same graph.
 
-Fig. 4 illustrated the appearance of chaotic behaviour as a function of changes in
+Fig. 4 illustrates the appearance of chaotic behaviour as a function of changes in
 $b_1$. To replicate it, we constructed a bifurcation diagram for species $z$ where we
 varied values of $b_1$ from 2.2 to 6.2 in steps of 0.01. However, our approach had to be
 slightly different.
@@ -150,7 +153,7 @@ values of $z$ in our bifurcation diagram.
 behaviour when varying $b_2$ instead of $b_1$, although they did not present the results.
 We examined the same behaviour by constructing another bifurcation diagram of $z$ for
 values of $b_2$ varying from 1.5 to 3.2, using the same method as described above.
-We fixed $b_1 = 3.0$, as it is the example used to illustrate chaotic behaviour throughout
+We set $b_1 = 3.0$, as it is the example used to illustrate chaotic behaviour throughout
 \citeauthor{hastings1991}'s paper.
 
 Fig. 5 illustrated another diagnostic feature of chaos, slopes of high magnitude on a
@@ -163,7 +166,7 @@ We defined planes of equation $z = 9.0$ and $z = 3.0$ for those subfigures, resp
 as these intercepted the "handles" of their respective three-dimensional phase plot.
 We defined those "handles" as in \citeauthor{hastings1991}, that is as the region in the phase
 plots where z declines from its maxima to its minima.
-However, we had to use a tolerance value $epsilon$ of 0.05 in order to identify the points
+However, we had to use a tolerance value $\epsilon = 0.05$ in order to identify the points
 whose distance from the plane was negligible (i.e. their $z$ values ranging between
 8.95-9.05 and 2.95-3.05, respectively), since we were not able to find the phase plots'
 exact interception points.
@@ -293,7 +296,7 @@ occur with the three species present.
 
 We believe that our mixed results in attempting to replicate \autoref{fig:figS1} came from the
 algorithm we used to identify the points that coincided with the plane.
-For instance, we had to specify a tolerance value ($epsilon$), which defined a region
+For instance, we had to specify a tolerance value ($\epsilon$ = 0.05), which defined a region
 under and above the plane.
 Although we were able to precisely replicate the Poincaré sections for $b_1$ = 3.0
 (\autoref{fig:figS1}a) and 6.0 (\autoref{fig:figS1}c), the Poincaré maps need some refinement.
@@ -323,7 +326,7 @@ obtain an even better performing implementation.
 GD, FB and EB performed the first version of the reproduction and wrote the first version of the manuscript. AMD and TP provided guidance and comments during the reproduction, and revised the manuscript. GD performed the final revisions.
 
 \section{Acknowledgments}
-This reproduction was realized as part of the \textit{BIO6032 Biologie computationnelle et modélisation} course at Université de Montréal.
+This reproduction was realized as part of the \textit{BIO6032 Biologie Computationnelle et Modélisation} course at Université de Montréal.
 
 \newpage
 
