@@ -102,10 +102,12 @@ algorithms Tsit5 and Rosenbrock23.
 To fully replicate key findings of the original paper, we focused on replicating
 original figures.
 Here we describe the steps we took for Fig. 2, 3, 4 and 5 from the original paper.
+Note that Fig. 5A refers to \citeauthor{hastings1991}'s figure, while \autoref{fig:fig5}a
+refers to our reproduction.
 
-Fig. 2 illustrates the chaotic behaviour of the system in time for each species.
-In order to replicate it, we followed \citeauthor{hastings1991}'s method and let our system run
-for 10 000 time steps.
+Original Fig. 2 illustrates the chaotic behaviour of the system in time for each species.
+In order to replicate it, we followed \citeauthor{hastings1991}'s method and let our system
+run for 10 000 time steps.
 We then represented the system's behaviour by plotting the species nondimensional
 variables against time (between time steps 5000 and 6500, which eliminates transient
 behaviour), as well as a three dimensional phase plot of the three species (for all time
@@ -118,23 +120,22 @@ In order to illustrate the dynamics of the model, we created a Graphics Intercha
 (GIF) file of the three-dimensional phase plot that showed the trajectories of $x$, $y$
 and $z$ for the selected parameters (\url{https://github.com/BIO6032/2019_replication_HastingsPowell_1991/blob/master/article/figures/figure2D.gif}).
 
-Fig. 3 shows the divergence of trajectories caused by a small change in initial
+Original Fig. 3 shows the divergence of trajectories caused by a small change in initial
 conditions when the system exhibits chaotic behaviour.
 To replicate the figure, we plotted the trajectory for species $x$ between time steps 0
 and 500 starting at $x = 0.77$, then changed the initial $x$ value by 0.01 (to $x = 0.78$)
-and plotted the new trajectory for the same interval on the same graph.
+and plotted the new trajectory for the same interval on the same figure.
 
-Fig. 4 illustrates the appearance of chaotic behaviour as a function of changes in
+Original Fig. 4 illustrates the appearance of chaotic behaviour as a function of changes in
 $b_1$. To replicate it, we constructed a bifurcation diagram for species $z$ where we
-varied values of $b_1$ from 2.2 to 6.2 in steps of 0.01. However, our approach had to be
-slightly different.
-\citeauthor{hastings1991} constructed what we consider a special type of bifurcation diagram,
+varied values of $b_1$ from 2.2 to 6.2 in steps of 0.01.
+However, our approach was slightly different from the original one.
+\citeauthor{hastings1991}'s figure is a special type of bifurcation diagram
 representing only the maxima of $z$ as a function of $b_1$, rather than all possible
-values in the system's behaviour, as in a typical logistic bifurcation diagram.
-This raised the problem of correctly identifying the maximum values in the cycling
-dynamic. Moreover, \citeauthor{hastings1991} mentioned that, in order to clarify their figure,
-they eliminated points resulting from the secondary local maxima in the cycling dynamics
-of species $z$, but they did not provide details on how they identified such points.
+values in the system's behaviour as in a typical logistic bifurcation diagram.
+This raises the problem of correctly identifying the maximum values in the cycling
+dynamics. Moreover, \citeauthor{hastings1991} mention removing points resulting from
+secondary local maxima, but do not provide details on how to identify these points.
 Hence, we adopted the following method:
 1) we selected the 1000 last solutions for our system between time steps 1 and 10 000, in
 order to eliminate transient behaviour;
@@ -149,23 +150,23 @@ were unstable and that the system did not reach a cycling behaviour within 10 00
 For these values of $b_1$ (37 values, all between 5.01 and 6.2), we could not present any
 values of $z$ in our bifurcation diagram.
 
-\citeauthor{hastings1991} mentioned in their original paper that they also examined the system's
-behaviour when varying $b_2$ instead of $b_1$, although they did not present the results.
+\citeauthor{hastings1991} mention in their original paper that they also examined the system's
+behaviour when varying $b_2$ instead of $b_1$, although they do not present the results.
 We examined the same behaviour by constructing another bifurcation diagram of $z$ for
 values of $b_2$ varying from 1.5 to 3.2, using the same method as described above.
 We set $b_1 = 3.0$, as it is the example used to illustrate chaotic behaviour throughout
 \citeauthor{hastings1991}'s paper.
 
-Fig. 5 illustrated another diagnostic feature of chaos, slopes of high magnitude on a
-Poincaré map, for values of $b_1$ where the bifurcation diagram suggested chaotic
+Original Fig. 5 illustrates another diagnostic feature of chaos, slopes of high magnitude on
+a Poincaré map, for values of $b_1$ where the bifurcation diagram suggests chaotic
 behaviour. In order to replicate this figure, we solved the system of differential
 equations using the abovementioned algorithm RK4, as well as a relative tolerance of
 $1e-14$. We used $b_1 = 3.0$ and $b_1 = 6.0$, as in the original paper, to replicate its
 subfigures A-B and C-D, respectively.
 We defined planes of equation $z = 9.0$ and $z = 3.0$ for those subfigures, respectively,
 as these intercepted the "handles" of their respective three-dimensional phase plot.
-We defined those "handles" as in \citeauthor{hastings1991}, that is as the region in the phase
-plots where z declines from its maxima to its minima.
+We defined those "handles" as in \citeauthor{hastings1991}, that is as the region in the
+phase plots where z declines from its maxima to its minima.
 However, we had to use a tolerance value $\epsilon = 0.05$ in order to identify the points
 whose distance from the plane was negligible (i.e. their $z$ values ranging between
 8.95-9.05 and 2.95-3.05, respectively), since we were not able to find the phase plots'
