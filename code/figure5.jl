@@ -1,7 +1,7 @@
 ### Hastings & Powell 1991
-## Reproducing teacup figure (figure 2D) and figure 5
+## Reproducing figure 5
 
-#### FIGURES 2D (=5E), 5A and 5B ####
+#### Figure 5 (Poincaré section & map) ####
 #### b1 = 3.0
 
 u0=[0.76,0.16,9.9]  #initial conditions for x,y,z
@@ -17,12 +17,12 @@ sol_y_b3 = sol_b3[2,:] # timeseries for y
 sol_z_b3 = sol_b3[3,:] # timeseries for z
 
 constant_b3 = 9.0 # poincaré section (z value)
-epsilon_b3 = 0.05 # margin of error for z value
+ϵ_b3 = 0.05 # margin of error for z value
 
 # Find timesteps where points are in poincaré section
 ind_x_b3 = findall(i -> 0.9 <= i <= 1.0, sol_x_b3) # x between 0.9 and 1 (high)
 ind_y_b3 = findall(i -> 0.0 <= i <= 0.1, sol_y_b3) # y between 0 and 0.1 (low)
-ind_z_b3 = findall(i -> constant_b3 - epsilon_b3 <= i <= constant_b3 + epsilon_b3, sol_z_b3) # z around constant
+ind_z_b3 = findall(i -> constant_b3 - ϵ_b3 <= i <= constant_b3 + ϵ_b3, sol_z_b3) # z around constant
 
 ind_xyz_b3 = zeros(Int64, 10000) # initialize the vector of concordant indices
 # for loop : concordant indices
@@ -86,12 +86,12 @@ sol_y_b6 = sol_b6[2,:] # timeseries for y
 sol_z_b6 = sol_b6[3,:] # timeseries for z
 
 constant_b6 = 3.0 # poincaré section (z value)
-epsilon_b6 = 0.05 # margin of error for z value
+ϵ_b6 = 0.05 # margin of error for z value
 
 # Find timesteps where points are in poincaré section
 ind_x_b6 = findall(i -> 0.93 <= i <= 1.0, sol_x_b6) # x between 0.9 and 1 (high)
 ind_y_b6 = findall(i -> 0.0 <= i <= 0.085, sol_y_b6) # y between 0 and 0.1 (low)
-ind_z_b6 = findall(i -> constant_b6 - epsilon_b6 <= i <= constant_b6 + epsilon_b6, sol_z_b6) # z around constant
+ind_z_b6 = findall(i -> constant_b6 - ϵ_b6 <= i <= constant_b6 + ϵ_b6, sol_z_b6) # z around constant
 
 ind_xyz_b6 = zeros(Int64, 15000) # initialize the vector of concordant indices
 # for loop : concordant indices
