@@ -17,7 +17,7 @@ All the scripts required to reproduce the model are in the `code/` subfolder.
 They assume that `code/` is used as the working directory.
 
 #### Initial setup
-To reproduce our project, we recommend the following steps as initial setup, assuming *Julia v1.3.1* is already installed and a UNIX-like terminal is used:
+To reproduce our project, we recommend the following steps as initial setup, assuming *Julia v1.3.1* is already installed:
 1. Clone this repository
 ```
 git clone https://github.com/BIO6032/2019_replication_HastingsPowell_1991.git
@@ -27,12 +27,13 @@ git clone https://github.com/BIO6032/2019_replication_HastingsPowell_1991.git
 julia
 cd("code")
 ```
-3. Run the following command to install the exact versions of packages (as specified in the Project Environment)
+3. Run the following commands to install the exact versions of packages (as specified in the Project Environment)
 ```
-]instantiate .
+import Pkg; Pkg.activate(".")
+Pkg.instantiate()
 ```
 
-#### Running model
+#### Running the model
 `main.jl` can be run to reproduce all figures after setup. Alternatively, individual scripts in `code/` can be run interactively after running lines 1-15 of `main.jl`.
 
 ### Article reproduction
