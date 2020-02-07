@@ -40,7 +40,8 @@ fig2d_flip = plot(sol_x_b3, sol_y_b3_flip, sol_z_b3, #sol_b3,vars=(1,2,3),
              legend =:none, size=(600,600), c=:black,
              right_margin=5Plots.mm, left_margin=2Plots.mm,
              )
-# Otherwise, it's also possible to use PyPlot
+# Otherwise, it's also possible to use the pyplot backend (additionnal dependency)
+#=
 pyplot()
 fig2d_pyplot = plot(sol_x_b3, sol_y_b3, sol_z_b3, #sol_b3,vars=(1,2,3),
              linewidth=0.1,
@@ -50,7 +51,9 @@ fig2d_pyplot = plot(sol_x_b3, sol_y_b3, sol_z_b3, #sol_b3,vars=(1,2,3),
              tick_direction=:out, guidefontsize=12, tickfontsize=12,
              legend =:none, size=(600,600), c=:black)
 gr()
+=#
+
 # Export figures
-savefig(fig2d, joinpath("..", "article", "figures", "fig2d_misplaced"))
+# savefig(fig2d, joinpath("..", "article", "figures", "fig2d_misplaced"))
 savefig(fig2d_flip, joinpath("..", "article", "figures", "fig2d"))
-savefig(fig2d_pyplot, joinpath("..", "article", "figures", "fig2d_pyplot"))
+# savefig(fig2d_pyplot, joinpath("..", "article", "figures", "fig2d_pyplot"))
