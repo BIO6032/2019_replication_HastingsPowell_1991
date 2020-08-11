@@ -19,7 +19,3 @@ for figfile in filter(f -> isfile(f)&startswith(f, "figure")&!endswith(f, "gif.j
     @info "Running $figfile"
     include(figfile)
 end
-
-# Make figure2D GIF
-@info "Running figure2D-gif.jl"
-include("figure2D-gif.jl")

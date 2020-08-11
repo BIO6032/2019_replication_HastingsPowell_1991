@@ -1,6 +1,22 @@
 #### Teacup GIF
 ## Inspired by an example of Lorez attractor: http://docs.juliaplots.org/latest/
 ## FFmpeg has to be installed prior to running the code
+
+## Preparation
+
+# Activate project environment
+import Pkg; Pkg.activate(".")
+
+# Load required packages
+using ParameterizedFunctions
+using Plots
+using DifferentialEquations
+
+# Load Hastings & Powell's model
+include("HPmodel.jl")
+
+## Produce the GIF
+
 # define the model
 mutable struct TeaCup
     dt; a1; a2; b1; b2; d1; d2; x; y; z
