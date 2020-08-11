@@ -39,11 +39,15 @@ After setup, `main.jl` can be run to reproduce all figures in a single call.
 include("main.jl") # make sure you ran cd("code") to set the correct working directory
 ```
 
-Alternatively, individual scripts in `code/` (producing one figure each) can
-be run separately after running lines 1-15 of `main.jl` (which will load the
-packages and the model). To run interactively, simply run the content
-line-by-line in a terminal or through a Julia IDE, such as
-[Juno](https://junolab.org/) or [Julia for VS Code](https://www.julia-vscode.org/).
+Note that this is not an especially intensive task. On an ordinary laptop, it takes about 1 minute, 2.00 GB of memory and uses a single core. However, if using the packages for the first time, precompiling may take an additional 5 minutes (Julia has to do this after installing or changing versions).
+
+Alternatively, individual scripts in `code/` (producing one figure each) can be run separately after running lines 1-15 of `main.jl` (which will load the packages and the model). To run interactively, simply run the content line-by-line in a terminal or through a Julia IDE, such as [Juno](https://junolab.org/) or [Julia for VS Code](https://www.julia-vscode.org/).
+
+The GIF can be reproduced by running the following. This is longer than for the core figures and takes about 8-10 minutes.
+
+```julia
+include("figure2D-gif.jl") # make sure you ran cd("code") to set the correct working directory
+```
 
 ### Article reproduction
 
