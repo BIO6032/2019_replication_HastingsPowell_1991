@@ -22,19 +22,28 @@ To reproduce our project, we recommend the following steps as initial setup, ass
 ```
 git clone https://github.com/BIO6032/2019_replication_HastingsPowell_1991.git
 ```
-2. Launch *Julia* in the repository and set `code/` as the working directory:
-```
-julia
+2. Launch *Julia* in the repository, then set `code/` as the working directory:
+```julia
 cd("code")
 ```
 3. Run the following commands to install the exact versions of packages (as specified in the Project Environment)
-```
+```julia
 import Pkg; Pkg.activate(".")
 Pkg.instantiate()
 ```
 
 #### Running the model
-`main.jl` can be run to reproduce all figures after setup. Alternatively, individual scripts in `code/` can be run interactively after running lines 1-15 of `main.jl`.
+After setup, `main.jl` can be run to reproduce all figures in a single call.
+
+```julia
+include("main.jl") # make sure you ran cd("code") to set the correct working directory
+```
+
+Alternatively, individual scripts in `code/` (producing one figure each) can
+be run separately after running lines 1-15 of `main.jl` (which will load the
+packages and the model). To run interactively, simply run the content
+line-by-line in a terminal or through a Julia IDE, such as
+[Juno](https://junolab.org/) or [Julia for VS Code](https://www.julia-vscode.org/).
 
 ### Article reproduction
 
