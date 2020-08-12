@@ -27,7 +27,7 @@ function b2_behavior(;b1val::Float64, b2low::Float64=1.5, b2up::Float64=3.2,out:
     # Change b1 value
     p[4] = b2 = bs[j]
     # Solve for given b1 value
-    prob = ODEProblem(parameterized_model, u0, tspan, p)
+    prob = ODEProblem(parameterized_model!, u0, tspan, p)
     sol = solve(prob)
     # Save values
     if length(sol[3,:]) > N

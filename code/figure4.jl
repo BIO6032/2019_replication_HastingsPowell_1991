@@ -21,7 +21,7 @@ for j in 1:length(bs)
   # Change b1 value
   p[3] = b1 = bs[j]
   # Solve for given b1 value
-  prob = ODEProblem(parameterized_model, u0, tspan, p)
+  prob = ODEProblem(parameterized_model!, u0, tspan, p)
   sol = solve(prob)
   # Save values
   if length(sol[3,:]) > N

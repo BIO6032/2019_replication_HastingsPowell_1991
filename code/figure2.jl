@@ -6,7 +6,7 @@ tspan = (0.0, 10000.0) #timespan
 p = [5.0, 0.1, 3.0, 2.0, 0.4, 0.01] # values for a1, a2, b1, b2, d1 and d2
 
 ###Solving the differential equations
-prob = ODEProblem(parameterized_model, u0, tspan, p)
+prob = ODEProblem(parameterized_model!, u0, tspan, p)
 sol = solve(prob)
 
 ###Figure 2

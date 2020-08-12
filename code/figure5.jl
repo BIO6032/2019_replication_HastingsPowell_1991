@@ -9,7 +9,7 @@ tspan = (0.0, 10000.0) #timespan
 p_b3 = [5.0, 0.1, 3.0, 2.0, 0.4, 0.01] # parameter values (a1, a2, b1, b2, c1, c2)
 
 # Solving the system of differential equations
-prob_b3 = ODEProblem(parameterized_model, u0, tspan, p_b3)
+prob_b3 = ODEProblem(parameterized_model!, u0, tspan, p_b3)
 sol_b3 = solve(prob_b3, alg = RK4(), reltol=1e-14)
 
 sol_x_b3 = sol_b3[1, :] # timeseries for x
@@ -78,7 +78,7 @@ plot!(xmin:0.01:xmax, xmin:0.01:xmax, c = :black)
 p_b6 = [5.0, 0.1, 6.0, 2.0, 0.4, 0.01] # parameter values (a1, a2, b1, b2, c1, c2)
 
 # Solving the system of differential equations
-prob_b6 = ODEProblem(parameterized_model, u0, tspan, p_b6)
+prob_b6 = ODEProblem(parameterized_model!, u0, tspan, p_b6)
 sol_b6 = solve(prob_b6, alg = RK4(), reltol=1e-14) # RK4 algorithm
 
 sol_x_b6 = sol_b6[1, :] # timeseries for x
