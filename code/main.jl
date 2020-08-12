@@ -7,11 +7,13 @@
 import Pkg; Pkg.activate(".")
 
 # Load required packages
+@info "Loading required packages"
 using ParameterizedFunctions
 using Plots
 using DifferentialEquations
 
 # Load Hastings & Powell's model
+@info "Loading model"
 include("HPmodel.jl")
 
 # Make the figures
