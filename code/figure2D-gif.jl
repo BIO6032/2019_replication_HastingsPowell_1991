@@ -8,9 +8,8 @@
 import Pkg; Pkg.activate(".")
 
 # Load required packages
-using ParameterizedFunctions
-using Plots
 using DifferentialEquations
+using Plots
 
 # Load Hastings & Powell's model
 include("HPmodel.jl")

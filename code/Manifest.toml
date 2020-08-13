@@ -363,12 +363,6 @@ git-tree-sha1 = "eee8bb40d5265b97b1e6c685d46afbdcc559f789"
 uuid = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
 version = "5.28.1"
 
-[[ParameterizedFunctions]]
-deps = ["DataStructures", "DiffEqBase", "LinearAlgebra", "SymEngine"]
-git-tree-sha1 = "4ddf66140e4a0fbf66610da9e6a1cb24a8d57580"
-uuid = "65888b18-ceab-5e60-b2b9-181511a3b968"
-version = "4.2.1"
-
 [[Parameters]]
 deps = ["OrderedCollections"]
 git-tree-sha1 = "b62b2558efb1eef1fa44e4be5ff58a515c287e38"
@@ -552,12 +546,6 @@ deps = ["BinaryProvider", "DataStructures", "DiffEqBase", "Libdl", "LinearAlgebr
 git-tree-sha1 = "a4d1e71b4fcfe655e0f96e935d173d1cefeaacc7"
 uuid = "c3572dad-4567-51f8-b174-8c6c989267f4"
 version = "3.8.1"
-
-[[SymEngine]]
-deps = ["BinaryProvider", "Compat", "Libdl", "RecipesBase", "SpecialFunctions"]
-git-tree-sha1 = "aca255d98438f9c1b16ef4912a170614ea9eb602"
-uuid = "123dc426-2d89-5057-bbad-38513e3affd8"
-version = "0.7.1"
 
 [[TableTraits]]
 deps = ["IteratorInterfaceExtensions"]
