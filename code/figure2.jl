@@ -11,15 +11,15 @@ sol = solve(prob)
 
 ###Figure 2
 fig2a = plot(sol, vars = (0, 1), xlim = (5000, 6500), ylim = (0, 1),
-             xlabel = "time", ylabel = "x", linewidth = 0.01, leg = false,
+             xlabel = "time", ylabel = "x", leg = false,
              grid = :none, title = "a", titleloc = :left, c = :black
              ) #2a
 fig2b = plot(sol, vars = (0, 2), xlim = (5000, 6500), ylim = (0, 0.5),
-             xlabel = "time", ylabel = "y", linewidth = 0.01, leg = false,
+             xlabel = "time", ylabel = "y", leg = false,
              grid = :none, title="b", titleloc=:left, c=:black
              ) #2b
 fig2c = plot(sol, vars = (0, 3), xlim = (5000, 6500), ylim = (7, 10.5),
-             xlabel = "time", ylabel = "z", linewidth = 0.01, leg = false,
+             xlabel = "time", ylabel = "z", leg = false,
              grid = :none, title = "c", titleloc = :left, c = :black,
              ) #2c
 
