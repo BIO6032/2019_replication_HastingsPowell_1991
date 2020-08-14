@@ -24,11 +24,11 @@ fig2c = plot(sol, vars = (0, 3), xlim = (5000, 6500), ylim = (7, 10.5),
              ) #2c
 
 fig2 = plot(fig2a, fig2b, fig2c, layout = (3,1),
-            size = (500, 900), titlefontsize = 15,
-            tickfontsize = 15, guidefontsize = 15,
+            size = (500, 900), titlefontsize = 11,
+            tickfontsize = 8, guidefontsize = 10,
             left_margin = 8Plots.mm, right_margin = 5Plots.mm,
             bottom_margin = 2Plots.mm,
             framestyle = :box
             )
 ## Export figures
-savefig(fig2, joinpath("..", "article", "figures", "fig2"))
+savefig(fig2, joinpath("..", "article", "figures", "fig2.pdf"))

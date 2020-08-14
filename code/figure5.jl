@@ -142,7 +142,7 @@ plot!(xmin:0.01:xmax, xmin:0.01:xmax, color = :black)
 
 # Export complete fig5
 fig5 = plot(fig5a, fig5b, fig5c, fig5d, layout = 4,
-            titlefontsize = 10,
+            titlefontsize = 11, tickfontsize = 8, guidefontsize = 10,
             framestyle = :box
             )
-savefig(fig5, joinpath("..", "article", "figures", "fig5"))
+savefig(fig5, joinpath("..", "article", "figures", "fig5.pdf"))

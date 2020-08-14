@@ -76,11 +76,11 @@ function b2_behavior(;b1val::Float64, b2low::Float64=1.5, b2up::Float64=3.2,out:
   end
   # Plot results (bifurcation diagram)
   scatter(results[:,1], results[:,2],
-          markersize = 1,
+          markersize = 1, c = :black,
           xlabel = "b2", xlim = (b2low,b2up), xticks = b2low:0.25:b2up,
           ylabel = "Zmax", yticks = (0.0:2.0:maximum(results[:, 2]), string.(0.0:2.0:maximum(results[:, 2]))),
           legend = false, grid = :none, framestyle = :box,
-          c = :black)
+          guidefontsize = 10)
 end
 
 # Examine behavior when changing b2 at b1 = 3.0
@@ -89,7 +89,7 @@ figS1_maxloc = b2_behavior(b1val = 3.0, b2low = 1.5, b2up = 3.2,
 figS1_all = b2_behavior(b1val = 3.0, out = "all")
 
 ## Export figures
-savefig(figS1_maxloc, joinpath("..", "article", "figures", "figS1"))
+savefig(figS1_maxloc, joinpath("..", "article", "figures", "figS1.pdf"))
 
 # Additionnal examinations
 b2_behavior(b1val = 2.0)

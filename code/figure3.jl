@@ -15,10 +15,12 @@ plot(sol_serie1, vars = 1, xlim = (0, 500), ylim = (0, 1), c=:black, linewidth=2
 u0_serie2 = [0.78, 0.16, 9.9]
 
 prob_serie2 = ODEProblem(parameterized_model!, u0_serie2, tspan, p)
-sol_serie2 = solve(prob_serie2)
+sol_serie2 = solve(prob_serie2, )
 
-fig3 = plot!(sol_serie2, vars = 1, xlim = (0, 500), ylim = (0, 1), linestyle = :dash, linewidth = 2,
-             grid=:none, legend = false, xlabel = "time", ylabel = "x", c = :darkgrey, framestyle = :box)
+fig3 = plot!(sol_serie2, vars = 1, xlim = (0, 500), ylim = (0, 1), 
+             c = :darkgrey, linestyle = :dash, linewidth = 2,
+             xlabel = "time", ylabel = "x", guidefontsize = 10,
+             grid = :none, legend = false, framestyle = :box)
 
 ## Export figures
-savefig(fig3, joinpath("..", "article", "figures", "fig3"))
+savefig(fig3, joinpath("..", "article", "figures", "fig3.pdf"))

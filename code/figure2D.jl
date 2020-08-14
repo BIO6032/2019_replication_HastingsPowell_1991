@@ -17,13 +17,12 @@ sol_y_b3 = sol_b3[2, :] # timeseries for y
 sol_z_b3 = sol_b3[3, :] # timeseries for z
 
 # Teacup Figures 2D and 5E (Three-dimensional phase plot)
-gr()
 fig2d = plot(sol_x_b3, sol_y_b3, sol_z_b3, # sol_b3, vars = (1,2,3),
-             linewidth = 0.01, linestyle = :dot,
+             linestyle = :dot,
              xlabel = "x", xflip = false, xlim = (0.0, 1.0), xticks = 0.0:0.5:1.0,
              ylabel = "y", yflip = true, ylim = (0.0, 0.5), yticks = 0.0:0.25:0.5,
              zlabel = "z", zflip = false, zlim = (7.5, 10.5), zticks = 7.5:1.5:10.5,
-             tick_direction = :out, guidefontsize = 12, tickfontsize = 12,
+             tick_direction = :out, guidefontsize = 10, tickfontsize = 8,
              legend = :none, size = (600, 600), c = :black,
              right_margin = 5Plots.mm, left_margin = 2Plots.mm,
              )
@@ -32,11 +31,11 @@ fig2d = plot(sol_x_b3, sol_y_b3, sol_z_b3, # sol_b3, vars = (1,2,3),
 sol_y_b3_flip = copy(sol_y_b3)
 sol_y_b3_flip = 0.5 .- sol_y_b3_flip
 fig2d_flip = plot(sol_x_b3, sol_y_b3_flip, sol_z_b3, #sol_b3,vars=(1,2,3),
-             linewidth = 0.01, linestyle = :dot,
+             linestyle = :dot,
              xlabel = "x", xflip = false, xlim = (0.0, 1.0), xticks = 0.0:0.5:1.0, xrotation = 30.0,
              ylabel = "y", yflip = false, ylim = (0.0, 0.5), yticks = (0.0:0.25:0.5, string.(0.5:-0.25:0.0)), yrotation=-10.0,
              zlabel = "z", zflip = false, zlim = (7.5, 10.5), zticks = 7.5:1.5:10.5, zrotation=0.0,
-             tick_direction=:out, guidefontsize = 12, tickfontsize = 12,
+             tick_direction=:out, guidefontsize = 10, tickfontsize = 8,
              legend =:none, size = (600,600), c=:black,
              right_margin = 5Plots.mm, left_margin = 2Plots.mm,
              )
@@ -55,5 +54,5 @@ gr()
 
 # Export figures
 # savefig(fig2d, joinpath("..", "article", "figures", "fig2d_misplaced"))
-savefig(fig2d_flip, joinpath("..", "article", "figures", "fig2d"))
+savefig(fig2d_flip, joinpath("..", "article", "figures", "fig2d.pdf"))
 # savefig(fig2d_pyplot, joinpath("..", "article", "figures", "fig2d_pyplot"))
