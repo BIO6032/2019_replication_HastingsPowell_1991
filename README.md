@@ -59,13 +59,20 @@ include("figure2D-gif.jl")
 #### Notes on possible warnings
 
 ```
+┌ Warning: dt <= dtmin. Aborting. There is either an error in your model specification or the true solution is unstable.
+└ @ DiffEqBase ~/.julia/packages/DiffEqBase/gTsoC/src/integrator_interface.jl:333
+```
+
+- This warning is expected in the `code/figure4.jl` and `code/figureS1.jl` scripts. It will be repeated a few times, as the model does not converge to a solution for a few higher parameter values. We chose to leave it as is to warn potential users at this.
+
+```
 GKS: Open failed in routine OPEN_WS
 GKS: GKS not in proper state. GKS must be either in the state WSOP or WSAC in routine ACTIVATE_WS
 GKS: can't connect to GKS socket application
 Did you start 'gksqt'?
 ```
 
-This graphics display error sometimes happens on Linux, but the figures should be produced anyways. It can likely be fixed by installing additional dependencies -- see this [issue](https://github.com/JuliaPlots/Plots.jl/issues/1649#issuecomment-592198276).
+- This graphics display error sometimes happens on Linux, but the figures should be produced anyways. It can likely be fixed by installing additional dependencies -- see this [issue](https://github.com/JuliaPlots/Plots.jl/issues/1649#issuecomment-592198276).
 
 ### Article reproduction
 
