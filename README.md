@@ -45,9 +45,21 @@ Alternatively, individual scripts in `code/` (producing one figure each) can be 
 
 The GIF can be reproduced by running the following. This is longer than for the core figures and takes about 8-10 minutes.
 
+
 ```julia
 include("figure2D-gif.jl") # make sure you ran cd("code") to set the correct working directory
 ```
+
+#### Notes on possible warnings
+
+```
+GKS: Open failed in routine OPEN_WS
+GKS: GKS not in proper state. GKS must be either in the state WSOP or WSAC in routine ACTIVATE_WS
+GKS: can't connect to GKS socket application
+Did you start 'gksqt'?
+```
+
+This graphics display error sometimes happens on Linux, but the figures should be produced anyways. It can likely be fixed by installing additional dependencies -- see this [issue](https://github.com/JuliaPlots/Plots.jl/issues/1649#issuecomment-592198276).
 
 ### Article reproduction
 
