@@ -98,8 +98,7 @@ the same initial conditions.
 As noted by \citeauthor{hastings1991}, numerical integration is the only way to investigate the
 global dynamical behaviour of the system.
 We used \textit{Julia v1.3.1} \citep{bezanson2017}, along with packages \verb| DifferentialEquations.jl|
-\citep{rackauckas2017} to compute the numerical integrations and \verb|ParameterizedFunctions.jl|
-\citep{rackauckas2017} to simplify the parameterized function call, as well as \verb|Plots.jl| to represent
+\citep{rackauckas2017} to compute the numerical integrations and \verb|Plots.jl| to represent
 our results. We let the \verb|solve()| function select the appropriate algorithm to solve our
 differential equations.
 In our implementation, it selected a composite algorithm combining, amongst others,
