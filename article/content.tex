@@ -99,10 +99,13 @@ As noted by \citeauthor{hastings1991}, numerical integration is the only way to 
 global dynamical behaviour of the system.
 We used \textit{Julia v1.3.1} \citep{bezanson2017}, along with packages \verb| DifferentialEquations.jl|
 \citep{rackauckas2017} to compute the numerical integrations and \verb|Plots.jl| to represent
-our results. We let the \verb|solve()| function select the appropriate algorithm to solve our
-differential equations.
+our results. 
+Not knowing the exact algorithm used in the original article, we let the \verb|solve()| function 
+select the appropriate algorithm to solve our differential equations.
 In our implementation, it selected a composite algorithm combining, amongst others,
 algorithms Tsit5 and Rosenbrock23.
+We did note, however, that setting a specific algorithm such as RK4 sometimes resulted in a similar 
+behaviour for the system. 
 
 To fully replicate key findings of the original paper, we focused on replicating
 original figures.
