@@ -51,7 +51,7 @@ fig5a = plot(sol_x_b3[ind_xyz_b3], sol_y_b3[ind_xyz_b3],
              legend = false,
              seriestype = :scatter,
              xlabel = "x(n)", xlim = (xmin, xmax), xticks = xmin:0.01:xmax, xminorticks = 2,
-             ylabel = "x(n)", ylim = (ymin, ymax), yticks = ymin:0.01:ymax, yminorticks = 2,
+             ylabel = "y(n)", ylim = (ymin, ymax), yticks = ymin:0.01:ymax, yminorticks = 2,
              xgrid = :none, ygrid = :none,
              title = "A", titleloc = :left,
              c = :black, ms = 3)
