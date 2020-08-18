@@ -28,15 +28,15 @@ Replicating a classic study and model like this one is important for many reason
 ensuring that they can still be reproduced;
 2) we can provide a publicly available and reproducible version of the codes that recreate
 the model.
-We were able to successfully replicate all the figures in the original article using
+We were able to successfully replicate all figures in the original article using
 \textit{Julia v1.3.1}.
-All the code used to replicate the original model is available alongside this article
+All code used to replicate the original model is available alongside this article
 (\url{https://github.com/BIO6032/2019_replication_HastingsPowell_1991}).
 
 \section{Methods}
 
 The model formulation used in this paper is the same as in the original
-publication. \citeauthor{hastings1991} used a 14 parameters model to represent the three-species
+publication. \citeauthor{hastings1991} used a 14 parameter model to represent the three-species
 food chain, with $X$, $Y$, and $Z$ as the numbers of the species at the lowest level of
 the food chain, of the species that preys upon $X$, and of the species that preys upon
 $Y$, respectively.
@@ -146,7 +146,7 @@ dynamics. Moreover, \citeauthor{hastings1991} mention removing points resulting 
 secondary local maxima, but do not provide details on how to identify these points.
 Hence, we adopted the following method:
 1) we selected the 1000 last solutions for our system between time steps 1 and 10 000, in
-order to eliminate transient behaviour;
+order to eliminate transient behaviour; %Reviewer comment: This is unclear to me. Do you mean time steps 9000-10000? Please clarify.
 2) we selected the values that were greater than both their preceding and following
 values, which identified local maxima only;
 and 3) we only kept values that were greater than a given threshold of the cycle's maximal
@@ -217,7 +217,7 @@ Indeed, $x$ varies approximately from 0.2 to 1.0, $y$ from 0.0 to 0.4, and $z$ f
 
 Second, the time series of $x$ from $t = 0$ to $500$ supports the chaotic behaviour of the
 system, with slightly different initial conditions leading to increasingly different
-trajectories(\autoref{fig:fig3}). The values themselves are almost identical to \citeauthor{hastings1991}'s
+trajectories (\autoref{fig:fig3}). The values themselves are almost identical to \citeauthor{hastings1991}'s
 until $t \approx 250$, at which point they start to diverge, but this behaviour was to be
 expected without the exact same initial conditions.
 
@@ -236,7 +236,7 @@ confirm that chaos occurs for values other than $b_2$ = 2.0. Chaos is apparent f
 smaller or greater values.
 However, while \citeauthor{hastings1991} reported that chaos was more likely for greater values of
 $b_2$, our results highlight that $z$ instead converges to a single value and starts to
-crash past $b_2$ = 2.35.
+crash past $b_2$ = 2.35. %Reviewer comment: Please clarify what you mean by "crash" here. e.g. "starts to rapidly approach zero"
 
 Lastly, although \citeauthor{hastings1991} did not specify the equation of the plane that
 crosses the trajectories of the phase plot at its "handle", we were able to accurately
@@ -293,7 +293,8 @@ at $b_1$ = 3.1.
 
 While we also found chaos for values of $b_2$ other than the default one of 2.0, both
 smaller or greater, we do not totally agree with \citeauthor{hastings1991} that "chaos is more
-likely for larger values of $b_2$". As \autoref{fig:figS1}, chaos can be quite likely for both
+likely for larger values of $b_2$". As \autoref{fig:figS1} shows %Reviewer comment: missing verb?
+, chaos can be quite likely for both
 smaller or larger values.
 We find important to note, however, that at a certain value of $b_2$, $z$ converges and
 starts to crash, thus exhibiting non chaotic behaviour within a given range of $b_1$
@@ -311,7 +312,7 @@ Although we were able to precisely replicate the Poincaré sections for $b_1$ = 
 For $b_1$ = 3.0 (\autoref{fig:figS1}b), it lacked some points of the phase plots and included
 others that were closed yet non-coincident with the plane.
 For $b_1$ = 6.0 (\autoref{fig:figS1}d), the discrepancy was more obvious, and might be due to the
-more chaotic behaviour of the system under this parameter, observed for example from the
+more chaotic behaviour of the system under this parameter value, observed for example from the
 larger width of its "handle" (compare axis intervals of \autoref{fig:figS1} a,c).
 
 We have succeeded in replicating \citeauthor{hastings1991}'s model and its main findings, as our
@@ -319,12 +320,12 @@ results confirm chaos arising in a three species food chain in continuous time.
 In general, the model, including its equations and parameters, was well described by the
 authors. The most significant obstacles to reproducibility in \citeauthor{hastings1991}'s paper
 were the absence of the values of the initial conditions, which have a huge impact on a
-chaotic system, and the insufficient description of certain methods.
+chaotic system, and the insufficient description of certain methods. %Reviewer comment: Be explicit here about what was insufficiently described. E.g. the numerical integration methods.
 Consequently, there are slight differences between our results and theirs.
 Furthermore, since we tried to keep our implementation as close as possible to the
 original one, some steps did rely on arbitrary thresholds (for instance for the primary
 local maxima or the boundaries of the Poincaré sections and maps).
-Hence, our replication is somewhat not very flexible and possibly could not be applied to
+Hence, our replication is somewhat inflexible and possibly could not be applied to
 a broader range of parameter values.
 We suggest that an interesting step forward would be to train machine-learning algorithms,
 such as neural networks, to identify chaotic behaviour and its boundaries, in order to
