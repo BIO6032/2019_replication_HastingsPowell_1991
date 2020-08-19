@@ -1,6 +1,6 @@
 ### Hastings & Powell 1991
 ## Examining behavior when varying b2 value
-
+using LaTeXStrings
 ### Figure S1 (Bifurcation diagram)
 
 ## Wrap in function
@@ -77,8 +77,8 @@ function b2_behavior(;b1val::Float64, b2low::Float64=1.5, b2up::Float64=3.2,out:
   # Plot results (bifurcation diagram)
   scatter(results[:,1], results[:,2],
           markersize = 1, c = :black,
-          xlabel = "b2", xlim = (b2low,b2up), xticks = b2low:0.25:b2up,
-          ylabel = "Zmax", yticks = (0.0:2.0:maximum(results[:, 2]), string.(0.0:2.0:maximum(results[:, 2]))),
+          xlabel = L"b_2", xlim = (b2low,b2up), xticks = b2low:0.25:b2up,
+          ylabel = L"z_{max}", yticks = (0.0:2.0:maximum(results[:, 2]), string.(0.0:2.0:maximum(results[:, 2]))),
           legend = false, grid = :none, framestyle = :box,
           guidefontsize = 10)
 end

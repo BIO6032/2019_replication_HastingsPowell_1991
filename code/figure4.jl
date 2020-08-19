@@ -1,5 +1,6 @@
 ### Hastings & Powell 1991
 ## Reproducing figure 4
+using LaTeXStrings
 
 ### Figure 4 (Bifurcation diagram)
 
@@ -63,7 +64,7 @@ pts_maxloc = points_maxloc[points_maxloc[:,2] .> 0.00, :]
 fig4a = scatter(pts_maxloc[:, 1], pts_maxloc[:, 2],
                 markersize = 2, markeralpha = 0.5,
                 xlim = (2.2, 3.2), ylim = (9.5, 13.0),
-                xlabel = "b1", ylabel = "Zmax", legend = false,
+                xlabel = L"b_1", ylabel = L"z_{max}", legend = false,
                 grid = :none, c = :black, msw = 0.0, msc = :black,
                 title = "a", titleloc = :left
                 )
@@ -72,7 +73,7 @@ fig4b = scatter(pts_maxloc[:, 1], pts_maxloc[:, 2],
                 markersize = 2, markeralpha = 0.5, 
                 xlim = (3.0, 6.5), ylim = (3.0, 10.0),
                 xticks = 3.0:0.5:6.5, yticks = (3.0:1.0:10.0, string.(3.0:1.0:10.0)),
-                xlabel = "b1", ylabel = "Zmax", legend = false,
+                xlabel = L"b_1", ylabel = L"z_{max}", legend = false,
                 grid = :none, c = :black, msw = 0.0, msc = :black,
                 title = "b", titleloc = :left
                 )
@@ -81,7 +82,7 @@ fig4c = scatter(pts_maxloc[:, 1], pts_maxloc[:, 2],
                 markersize = 2, markeralpha = 0.5,
                 xlim = (2.25, 2.6), ylim = (11.4, 12.8),
                 xticks = 2.25:0.05:2.60, yticks = 11.1:0.2:12.8,
-                xlabel = "b1", ylabel = "Zmax", legend = false,
+                xlabel = L"b_1", ylabel = L"z_{max}", legend = false,
                 grid = :none, c = :black, msw = 0.0, msc = :black,
                 title = "c", titleloc = :left
                 )
