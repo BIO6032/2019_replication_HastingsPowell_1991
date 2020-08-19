@@ -10,6 +10,7 @@ import Pkg; Pkg.activate(".")
 @info "Loading required packages"
 using DifferentialEquations
 using Plots
+using LaTeXStrings
 
 # Load Hastings & Powell's model
 @info "Loading model"
