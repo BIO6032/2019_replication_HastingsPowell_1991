@@ -20,10 +20,10 @@ Zmin = zeros(Float64, length(bs))
 errors = zeros(Float64, length(bs))
 for j in 1:length(bs)
   # Change b1 value
-  p[3] = b1 = bs[j]
+  local p[3] = local b1 = bs[j]
   # Solve for given b1 value
-  prob = ODEProblem(parameterized_model!, u0, tspan, p)
-  sol = solve(prob)
+  local prob = ODEProblem(parameterized_model!, u0, tspan, p)
+  local sol = solve(prob)
   # Save values
   if length(sol[3,:]) > N
     Z[:,j] = sol[3, end-(N-1):end]
