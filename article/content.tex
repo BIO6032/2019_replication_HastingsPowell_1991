@@ -16,7 +16,7 @@ However, complex dynamics arise in a system with three or more species, and thes
 described as chaos rather than stable equilibrium.
 The simplest definition of chaos is the extreme sensitivity of a system to its
 initial conditions \citep{hastings1993}.
-\citet{hastings1991}, who studied chaos in a continuous time model of a food web including
+\citet{hastings1991}, who studied chaos in a continuous-time model of a food web including
 three species, contributed considerably to the significance and understanding of this subject.
 This study led to many others on food webs dynamics and chaos, which reinforced
 the importance of chaos in ecological modelling \citep{blasius1999, gakkhar2012}.
@@ -118,8 +118,8 @@ In order to replicate it, we followed \citeauthor{hastings1991}'s method and let
 run for 10 000 time steps.
 We then represented the system's behaviour by plotting the species nondimensional
 variables against time (between time steps 5000 and 6500, which eliminates transient
-behaviour), as well as a three dimensional phase plot of the three species (for all time
-steps). Note that in the case of the three dimensional phase plot, we had to set RK4 as
+behaviour), as well as a three-dimensional phase plot of the three species (for all time
+steps). Note that in the case of the three-dimensional phase plot, we had to set RK4 as
 the solving algorithm, as well as a relative tolerance of $1e-14$; otherwise, the
 representation was unexpectedly different from the original paper.
 This suggests that the results for this figure in the original article may have been an
@@ -153,7 +153,7 @@ necessarily reach a stable solution, and that the exact time steps vary for all 
 values, which identified local maxima only;
 and 3) we only kept values that were greater than a given threshold of the cycle's maximal
 amplitude, in order to remove secondary local maxima.
-We determined by trial and errors that the best threshold was 66\%, as it best removed
+We determined by trial and error that the best threshold was 66\%, as it best removed
 values in apparent second branches of $b_1$ while keeping the values in the primary
 branch. We note however that for some values of $b_1$, the true solutions of the system
 were unstable and that the system did not reach a cycling behaviour within 10 000 steps.
@@ -298,7 +298,7 @@ smaller or greater, we do not totally agree with \citeauthor{hastings1991} that 
 likely for larger values of $b_2$". As \autoref{fig:figS1} shows, chaos can be quite likely for both
 smaller or larger values.
 We find important to note, however, that at a certain value of $b_2$, $z$ converges and
-starts to crash, thus exhibiting non chaotic behaviour within a given range of $b_1$
+starts to crash, thus exhibiting non-chaotic behaviour within a given range of $b_1$
 values. This crash is to be expected when looking at the original dimensional parameters,
 so it is possible that \citeauthor{hastings1991} simply chose not to reach this limit in their
 analyses, as they were only interested in biologically reasonable parameters likely to
@@ -317,7 +317,7 @@ more chaotic behaviour of the system under this parameter value, observed for ex
 larger width of its "handle" (compare axis intervals of \autoref{fig:figS1} a,c).
 
 We have succeeded in replicating \citeauthor{hastings1991}'s model and its main findings, as our
-results confirm chaos arising in a three species food chain in continuous time.
+results confirm chaos arising in a three-species food chain in continuous time.
 In general, the model, including its equations and parameters, was well described by the
 authors. The most significant obstacles to reproducibility in \citeauthor{hastings1991}'s paper
 were the absence of the values of the initial conditions, which have a huge impact on a
