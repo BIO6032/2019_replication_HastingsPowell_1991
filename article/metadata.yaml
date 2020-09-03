@@ -12,8 +12,8 @@ title: "[Re] Chaos in a Three-Species Food Chain"
 authors:
   - name: Gabriel Dansereau
     orcid: 0000-0002-2212-3584
-    email:
-    affiliations: 1
+    email: gabriel.dansereau@umontreal.ca
+    affiliations: 1,*
 
   - name: Francis Banville
     orcid: 0000-0001-9051-0597
@@ -33,7 +33,7 @@ authors:
   - name: Timothée Poisot
     orcid: 0000-0002-0735-5184
     email: timothee.poisot@umontreal.ca
-    affiliations: 1,*      # * is for contact author
+    affiliations: 1
 
 # List of affiliations with code (corresponding to author affiliations), name
 # and address. You can also use these affiliations to add text such as "Equal
@@ -51,7 +51,7 @@ keywords: rescience, ecological modelling, food chain, chaos, julia
 #   see https://guides.github.com/activities/citable-code/
 code:
   - url: https://github.com/BIO6032/2019_replication_HastingsPowell_1991/
-  - doi:
+  - doi: 10.5281/zenodo.4012773
 
 # Date URL and DOI (optional if no data)
 data:
@@ -99,17 +99,17 @@ language: julia
 
 # For example, the URL of the GitHub issue where review actually occured
 review:
-  - url:
+  - url: https://github.com/ReScience/submissions/issues/15
 
 contributors:
-  - name:
-    orcid:
+  - name: Nicolas P. Rougier
+    orcid: 0000-0002-6972-589X
     role: editor
-  - name:
-    orcid:
+  - name: Carl Boettiger
+    orcid: 0000-0002-1642-628X
     role: reviewer
-  - name:
-    orcid:
+  - name: Philipp Boersch-Supan
+    orcid: 0000-0001-6723-6833
     role: reviewer
 
 # This information will be provided by the editor
