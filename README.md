@@ -1,5 +1,6 @@
 # [Re] Chaos in a Three-Species Food Chain
 ## 2019 Replication of Hastings & Powell (1991)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4012773.svg)](https://doi.org/10.5281/zenodo.4012773)
 
 This project is a replication and implementation in *Julia v1.3.1* of Hastings & Powell (1991), a classic paper in ecological modelling. Full reference to the original article:
 
