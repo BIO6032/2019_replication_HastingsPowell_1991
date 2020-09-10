@@ -8,7 +8,10 @@ This project is a replication and implementation in *Julia v1.3.1* of Hastings &
 
 The goal of this project was to test if the results of the original paper could be reproduced, as well as to provide a fully reproducible version for it on GitHub.
 
-The reproduction was successful for all important results. As a bonus, we represented the dynamics of the three-species system in the following animated 3D GIF:
+The reproduction was successful for all important results and was published in [ReScience C](https://rescience.github.io/bibliography/Dansereau_2020.html) (also archived on [Zenodo](https://zenodo.org/record/4022518)).
+The open review is available [here](https://github.com/ReScience/submissions/issues/15).
+
+As a bonus, we represented the dynamics of the three-species system in the following animated 3D GIF:
 
 ![Animated three-dimensional phase plot](article/figures/figure2D.gif)
 
